@@ -1,216 +1,276 @@
-# Backend Developer Journey 🚀
+# 🚀 Backend Developer Journey
 
-> My journey from MCA student to Python Backend Engineer.
+<div align="center">
+
+# Adyaprana Pradhan
+
+### Python Backend Engineer in Progress
+
+Building real-world backend systems with Python, FastAPI, PostgreSQL, Docker & AWS.
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge\&logo=FastAPI\&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=for-the-badge\&logo=postgresql\&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge\&logo=docker\&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-Learning-FF9900?style=for-the-badge\&logo=amazonaws\&logoColor=white)
+
+---
+
+### 🎯 Mission
+
+**MCA Student → Backend Engineer**
+
+</div>
+
+---
 
 ## 👨‍💻 About Me
 
-Hi, I'm Adyaprana Pradhan.
+I'm **Adyaprana Pradhan**, an MCA student focused on becoming a professional Backend Engineer.
 
-I am an MCA student focused on becoming a Backend Developer specializing in:
+My learning path is focused on:
 
-- Python
-- FastAPI
-- PostgreSQL
-- Docker
-- AWS
-- Redis
-- REST APIs
-- DSA
+* Python
+* FastAPI
+* PostgreSQL
+* Docker
+* AWS
+* Redis
+* REST APIs
+* DSA
 
-My goal is to secure a Backend Engineering role in Bangalore and build strong software engineering fundamentals.
+Instead of learning everything, I am focusing on mastering one domain properly:
 
----
-
-## 🎯 Mission
-
-Target Date: August 2027
-
-Goal:
-
-- Become a job-ready Python Backend Engineer
-- Build production-style backend projects
-- Master APIs, databases, and cloud fundamentals
-- Strengthen DSA and interview skills
-- Secure a 10+ LPA fresher role
+> Python Backend Engineering
 
 ---
 
-## 🛣️ Learning Roadmap
+## 🛣️ 14-Month Roadmap
 
-### Phase 1 — Python Foundation
+### ✅ Phase 1 — Python Foundation
 
-Topics:
+* Variables & Data Types
+* Strings
+* Operators
+* Conditions
+* Loops
+* Functions
+* OOP
+* Error Handling
+* File Handling
+* Modules & Packages
 
-- Variables
-- Data Types
-- Strings
-- Operators
-- Conditions
-- Loops
-- Functions
-- OOP
-- File Handling
-- Error Handling
-- Modules & Packages
+### ⏳ Phase 2 — Backend Development
 
-Current Progress:
+* HTTP Fundamentals
+* REST APIs
+* FastAPI
+* CRUD Operations
+* Authentication
+* API Testing
 
-- Phase 1 — Python Foundation
-- [ ] Week 1
----
+### ⏳ Phase 3 — Database & Backend Depth
 
-### Phase 2 — Backend Development
+* PostgreSQL
+* SQL
+* ORM
+* Redis
+* Database Design
 
-Topics:
+### ⏳ Phase 4 — Cloud & Deployment
 
-- HTTP Fundamentals
-- REST APIs
-- FastAPI
-- Authentication
-- CRUD Operations
-- API Design
-- Testing
+* Linux
+* Docker
+* AWS
+* CI/CD
+* Monitoring
 
----
+### ⏳ Phase 5 — Interview Preparation
 
-### Phase 3 — Databases & Advanced Backend
-
-Topics:
-
-- PostgreSQL
-- SQL
-- Database Design
-- ORM
-- Redis
-- Caching
+* DSA
+* System Design Basics
+* Backend Interview Questions
+* Mock Interviews
 
 ---
 
-### Phase 4 — Cloud & Deployment
+# 📚 Learning Logs
 
-Topics:
+<details>
+<summary><b>✅ Day 1 — Python Setup & Basics</b></summary>
 
-- Linux
-- Docker
-- AWS
-- CI/CD
-- Deployment
-- Monitoring
+### Topics Covered
+
+* Python Installation
+* VS Code Setup
+* Variables
+* Data Types
+* Type Conversion
+* First Python Programs
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* DAY-1 (Topics).png
+* DAY-1.md
+
+### Status
+
+✅ Completed
+
+</details>
+
+<details>
+<summary><b>✅ Day 2 — Input, Operators & Strings</b></summary>
+
+### Topics Covered
+
+* User Input
+* Arithmetic Operators
+* String Methods
+* f-Strings
+* Calculator Project
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* 08.py
+* 09.py
+* DAY-2 (Topics).png
+* DAY-2.md
+
+
+### Status
+
+✅ Completed
+
+</details>
+
+<details>
+<summary><b>⬜ Day 3 — Conditions (if / elif / else)</b></summary>
+
+Planned
+
+</details>
+
+<details>
+<summary><b>⬜ Day 4 — Loops</b></summary>
+
+Planned
+
+</details>
+
+<details>
+<summary><b>⬜ Day 5 — Lists & Tuples</b></summary>
+
+Planned
+
+</details>
+
+<details>
+<summary><b>⬜ Day 6 — Dictionaries & Sets</b></summary>
+
+Planned
+
+</details>
+
+<details>
+<summary><b>⬜ Day 7 — Weekly Revision</b></summary>
+
+Planned
+
+</details>
 
 ---
 
-### Phase 5 — Interview Preparation
+# 🏗️ Planned Projects
 
-Topics:
+### 1️⃣ URL Shortener API
 
-- DSA
-- System Design Basics
-- Backend Interview Questions
-- Mock Interviews
+**Stack**
 
----
-
-## 🏗️ Planned Projects
-
-### Project 1 — URL Shortener API
-
-Tech Stack:
-
-- FastAPI
-- PostgreSQL
-- Docker
+* FastAPI
+* PostgreSQL
+* Docker
 
 Features:
 
-- URL shortening
-- Analytics
-- Expiration dates
+* URL Shortening
+* Analytics
+* Expiration Support
 
 ---
 
-### Project 2 — Job Board API
+### 2️⃣ Job Board API
 
-Tech Stack:
+**Stack**
 
-- FastAPI
-- PostgreSQL
-- JWT Authentication
+* FastAPI
+* PostgreSQL
+* JWT Authentication
 
 Features:
 
-- Job posting
-- Search
-- User roles
+* Job Posting
+* Search
+* User Roles
 
 ---
 
-### Project 3 — AI Document Analyzer
+### 3️⃣ AI Document Analyzer
 
-Tech Stack:
+**Stack**
 
-- FastAPI
-- PostgreSQL
-- OpenAI API
-- AWS
+* FastAPI
+* PostgreSQL
+* AWS
 
 Features:
 
-- File upload
-- AI summaries
-- Search
+* File Upload
+* AI Summaries
+* Search
 
 ---
 
-## 📈 Skills Roadmap
-
-### Programming
-
-- Python
-
-### Backend
-
-- FastAPI
-- REST APIs
-
-### Database
-
-- PostgreSQL
-- Redis
-
-### DevOps
-
-- Docker
-- AWS
-
-### Version Control
-
-- Git
-- GitHub
-
----
-
-## 🔗 Links
+## 🌐 Connect With Me
 
 Portfolio:
-https://www.adyaprana.com
 
-GitHub:
-https://github.com/Adyaprana
+**https://www.adyaprana.com**
 
 LinkedIn:
-https://www.linkedin.com
+
+**https://www.linkedin.com/in/adyaprana21/**
+
+GitHub:
+
+**https://github.com/Adyaprana**
 
 ---
+
+<div align="center">
+
 
 ## ⭐ Philosophy
 
-Learn.
-Build.
-Deploy.
-Document.
+**Learn → Build → Deploy → Document**
 
 No tutorial hell.
 No copy-paste coding.
 No AI-generated projects without understanding.
 
 Build real skills. Build real systems.
+
+</div>
