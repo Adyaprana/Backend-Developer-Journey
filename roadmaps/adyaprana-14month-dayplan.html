@@ -1,0 +1,1928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adyaprana — 14 Month Mission Plan</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #080810;
+  --surface: #0f0f1a;
+  --card: #13131e;
+  --border: #1e1e2e;
+  --border2: #2a2a40;
+  --accent: #00ff88;
+  --accent2: #ff3366;
+  --accent3: #ffcc00;
+  --accent4: #00ccff;
+  --purple: #9966ff;
+  --text: #e0e0f0;
+  --muted: #666680;
+  --dim: #444455;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); }
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 100% 70% at 50% 50%, rgba(0,255,136,0.04) 0%, transparent 70%),
+    repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,255,136,0.03) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,255,136,0.03) 40px);
+}
+
+.hero-content { position:relative; z-index:2; max-width: 900px; }
+
+.mission-tag {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding: 6px 20px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.mission-tag::before, .mission-tag::after {
+  content: '//';
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  color: var(--accent);
+  opacity: 0.5;
+}
+.mission-tag::before { left: -20px; }
+.mission-tag::after { right: -20px; }
+
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(60px, 15vw, 160px);
+  line-height: 0.9;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.hero h1 .green { color: var(--accent); }
+.hero h1 .red { color: var(--accent2); }
+
+.hero-sub {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  font-size: clamp(16px, 3vw, 22px);
+  color: var(--muted);
+  margin: 16px 0 40px;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+  border: 1px solid var(--border2);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hero-stat {
+  flex: 1;
+  min-width: 120px;
+  padding: 20px;
+  border-right: 1px solid var(--border2);
+  text-align: center;
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  color: var(--accent);
+  display: block;
+  line-height: 1;
+}
+.hero-stat-label {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+  margin-top: 4px;
+}
+
+/* NAV */
+.phase-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,8,16,0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 20px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+}
+.phase-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 14px 20px;
+  border-right: 1px solid var(--border);
+  white-space: nowrap;
+  transition: color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.phase-nav a:hover { color: var(--accent); background: rgba(0,255,136,0.04); }
+.phase-nav a .dot { width:6px; height:6px; border-radius:50%; }
+
+/* MAIN */
+.container { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
+
+/* PHASE HEADER */
+.phase-header {
+  padding: 60px 0 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+.phase-label {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.phase-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.phase-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px, 8vw, 72px);
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+.phase-goal {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 600px;
+}
+.phase-meta {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.phase-pill {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border: 1px solid;
+  border-radius: 1px;
+}
+
+/* WEEK BLOCK */
+.week-block {
+  margin-bottom: 48px;
+}
+.week-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+.week-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  line-height: 1;
+  opacity: 0.15;
+  flex-shrink: 0;
+}
+.week-info {}
+.week-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.week-objective {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+/* DAY CARD */
+.days-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.day-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-left: 3px solid;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.day-card:hover { border-color: var(--accent); border-left-color: var(--accent) !important; }
+
+.day-num-col {
+  background: rgba(255,255,255,0.02);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 8px;
+  gap: 4px;
+}
+.day-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  line-height: 1;
+}
+.day-label {
+  font-size: 8px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.day-weekday {
+  font-size: 9px;
+  color: var(--dim);
+  text-align: center;
+}
+
+.day-content {
+  padding: 16px 18px;
+}
+.day-title {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+.day-tasks {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.day-tasks li {
+  font-size: 12px;
+  color: #aaaacc;
+  padding: 3px 0;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  border-bottom: 1px dashed rgba(255,255,255,0.04);
+}
+.day-tasks li:last-child { border-bottom: none; }
+.day-tasks li::before {
+  content: '▸';
+  font-size: 9px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+.day-resources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+.resource-chip {
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  padding: 3px 8px;
+  border-radius: 1px;
+  border: 1px solid;
+  white-space: nowrap;
+}
+.chip-yt { border-color: rgba(255,51,102,0.5); color: #ff6688; background: rgba(255,51,102,0.08); }
+.chip-doc { border-color: rgba(0,204,255,0.5); color: #00ccff; background: rgba(0,204,255,0.08); }
+.chip-practice { border-color: rgba(0,255,136,0.5); color: #00ff88; background: rgba(0,255,136,0.08); }
+.chip-build { border-color: rgba(255,204,0,0.5); color: #ffcc00; background: rgba(255,204,0,0.08); }
+.chip-read { border-color: rgba(153,102,255,0.5); color: #9966ff; background: rgba(153,102,255,0.08); }
+
+.day-card.rest { border-left-color: var(--dim) !important; opacity: 0.7; }
+.day-card.checkpoint { background: rgba(0,255,136,0.03); border-left-color: var(--accent) !important; }
+.day-card.project { background: rgba(255,204,0,0.03); border-left-color: var(--accent3) !important; }
+.day-card.revision { background: rgba(153,102,255,0.03); border-left-color: var(--purple) !important; }
+.day-card.dsa { background: rgba(0,204,255,0.03); border-left-color: var(--accent4) !important; }
+
+/* MILESTONE */
+.milestone {
+  background: linear-gradient(135deg, rgba(0,255,136,0.06), transparent);
+  border: 1px solid rgba(0,255,136,0.3);
+  padding: 28px 32px;
+  margin: 40px 0;
+  position: relative;
+}
+.milestone::before {
+  content: '◆ MILESTONE';
+  position: absolute;
+  top: -10px; left: 20px;
+  background: var(--bg);
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  padding: 0 10px;
+}
+.milestone-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.milestone-checks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.milestone-checks li {
+  list-style: none;
+  font-size: 12px;
+  color: #88ffcc;
+  display: flex;
+  gap: 8px;
+}
+.milestone-checks li::before { content: '✓'; color: var(--accent); font-weight: 700; }
+
+/* PHASE COLORS */
+.p1 { color: var(--accent); }
+.p2 { color: var(--accent3); }
+.p3 { color: var(--accent4); }
+.p4 { color: var(--purple); }
+.p5 { color: var(--accent2); }
+
+.day-card.p1-card { border-left-color: var(--accent); }
+.day-card.p2-card { border-left-color: var(--accent3); }
+.day-card.p3-card { border-left-color: var(--accent4); }
+.day-card.p4-card { border-left-color: var(--purple); }
+.day-card.p5-card { border-left-color: var(--accent2); }
+
+/* DIVIDER */
+.phase-divider {
+  height: 2px;
+  background: linear-gradient(to right, var(--accent), transparent);
+  margin: 80px 0 0;
+}
+
+/* FOOTER */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 60px 20px;
+  text-align: center;
+}
+.footer-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+footer p {
+  font-family: 'Crimson Pro', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+.footer-sig {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  color: var(--dim);
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .day-card { grid-template-columns: 54px 1fr; }
+  .day-num { font-size: 22px; }
+  .hero-stat-num { font-size: 30px; }
+  .milestone-checks { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="mission-tag">August 2027 · Bangalore</div>
+    <h1>
+      <span class="green">ADYA'S</span><br>
+      <span class="red">14</span> MONTH<br>
+      <span class="green">MISSION</span>
+    </h1>
+    <p class="hero-sub">Python Backend Developer · Day-by-Day Execution Plan · No Fluff</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-num">420</span>
+        <span class="hero-stat-label">Days</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">5</span>
+        <span class="hero-stat-label">Phases</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">3</span>
+        <span class="hero-stat-label">Projects</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-num">10+</span>
+        <span class="hero-stat-label">LPA Target</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="phase-nav">
+  <a href="#phase1"><span class="dot" style="background:var(--accent)"></span>Phase 1: Python</a>
+  <a href="#phase2"><span class="dot" style="background:var(--accent3)"></span>Phase 2: Backend</a>
+  <a href="#phase3"><span class="dot" style="background:var(--accent4)"></span>Phase 3: Depth</a>
+  <a href="#phase4"><span class="dot" style="background:var(--purple)"></span>Phase 4: Cloud+DSA</a>
+  <a href="#phase5"><span class="dot" style="background:var(--accent2)"></span>Phase 5: Jobs</a>
+</nav>
+
+<!-- ==================== PHASE 1 ==================== -->
+<div id="phase1" class="phase-divider"></div>
+<div class="container">
+  <div class="phase-header">
+    <div class="phase-label p1">Phase 01 · June 2026</div>
+    <div class="phase-title p1">PYTHON FOUNDATION</div>
+    <p class="phase-goal">"Learn to write real Python yourself. No AI writing your code. By day 30, you can build a working script from scratch."</p>
+    <div class="phase-meta">
+      <span class="phase-pill p1" style="border-color:var(--accent)">Month 1–2 · Days 1–60</span>
+      <span class="phase-pill" style="border-color:var(--border2); color:var(--muted)">3–4 hrs/day</span>
+      <span class="phase-pill" style="border-color:var(--border2); color:var(--muted)">No projects yet</span>
+    </div>
+  </div>
+
+  <!-- WEEK 1 -->
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p1">W1</div>
+      <div class="week-info">
+        <div class="week-title">Python Basics — Variables, Logic, Functions</div>
+        <div class="week-objective">Goal: Write 10 small programs without AI help by end of Week 1</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">01</span><span class="day-label">Day</span><span class="day-weekday">Mon</span></div>
+        <div class="day-content">
+          <div class="day-title">Setup + Python Introduction</div>
+          <ul class="day-tasks">
+            <li>Install Python 3.11, VS Code, Python extension</li>
+            <li>Understand: what is Python, why it's used in backend/AI</li>
+            <li>Run your first: <code>print("Hello Adyaprana")</code></li>
+            <li>Variables: int, str, float, bool — create 20 variables</li>
+            <li>Type function, type conversion</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ CodeWithHarry Python #1 (Hindi)</span>
+            <span class="resource-chip chip-doc">python.org/docs/tutorial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">02</span><span class="day-label">Day</span><span class="day-weekday">Tue</span></div>
+        <div class="day-content">
+          <div class="day-title">Input, Operators, Strings</div>
+          <ul class="day-tasks">
+            <li>input() function — take user input</li>
+            <li>Arithmetic operators (+, -, *, /, //, %, **)</li>
+            <li>String methods: upper(), lower(), strip(), replace(), split(), len()</li>
+            <li>f-strings — formatted strings (very important for backend)</li>
+            <li>Build: Calculator that takes 2 inputs and does all operations</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ CodeWithHarry Python #2-3 (Hindi)</span>
+            <span class="resource-chip chip-practice">Write 5 small programs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">03</span><span class="day-label">Day</span><span class="day-weekday">Wed</span></div>
+        <div class="day-content">
+          <div class="day-title">Conditions — if / elif / else</div>
+          <ul class="day-tasks">
+            <li>if, elif, else — full syntax</li>
+            <li>Comparison operators: ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+            <li>Logical operators: and, or, not</li>
+            <li>Nested if conditions</li>
+            <li>Build: Grade checker (A/B/C/D/F based on marks input)</li>
+            <li>Build: FizzBuzz problem (classic interview warm-up)</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ CodeWithHarry Python #4 (Hindi)</span>
+            <span class="resource-chip chip-practice">Solve 5 if-else problems on HackerRank</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">04</span><span class="day-label">Day</span><span class="day-weekday">Thu</span></div>
+        <div class="day-content">
+          <div class="day-title">Loops — for and while</div>
+          <ul class="day-tasks">
+            <li>for loop with range(), enumerate()</li>
+            <li>while loop — with break and continue</li>
+            <li>Nested loops</li>
+            <li>Build: Multiplication table printer</li>
+            <li>Build: Print all prime numbers up to 100</li>
+            <li>Build: Reverse a string using loop</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ CodeWithHarry Python #5 (Hindi)</span>
+            <span class="resource-chip chip-practice">5 loop problems on HackerRank</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">05</span><span class="day-label">Day</span><span class="day-weekday">Fri</span></div>
+        <div class="day-content">
+          <div class="day-title">Lists and Tuples</div>
+          <ul class="day-tasks">
+            <li>List: create, index, slice, append, remove, pop, sort, reverse</li>
+            <li>List comprehensions (very important — used everywhere)</li>
+            <li>Tuples: immutable lists — when and why to use</li>
+            <li>Build: Todo list program (add, remove, view items)</li>
+            <li>Build: Find max/min/average in a list without built-in functions</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ CodeWithHarry Python #6-7 (Hindi)</span>
+            <span class="resource-chip chip-practice">codewars.com — 3 kata</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">06</span><span class="day-label">Day</span><span class="day-weekday">Sat</span></div>
+        <div class="day-content">
+          <div class="day-title">Dictionaries and Sets</div>
+          <ul class="day-tasks">
+            <li>Dict: create, access, update, delete, .keys(), .values(), .items()</li>
+            <li>Nested dictionaries (very common in API responses)</li>
+            <li>Sets: unique elements, union, intersection, difference</li>
+            <li>Dict comprehension</li>
+            <li>Build: Student grade book using dictionary</li>
+            <li>Build: Word frequency counter from a paragraph</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ CodeWithHarry Python #8 (Hindi)</span>
+            <span class="resource-chip chip-practice">5 dict problems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card rest">
+        <div class="day-num-col"><span class="day-num" style="color:var(--dim)">07</span><span class="day-label">Day</span><span class="day-weekday">Sun</span></div>
+        <div class="day-content">
+          <div class="day-title" style="color:var(--muted)">Rest + Light Review</div>
+          <ul class="day-tasks">
+            <li>Re-read all programs you wrote this week (30 min)</li>
+            <li>Fix any programs that didn't work</li>
+            <li>Rest. Don't study more than 1 hour today</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WEEK 2 -->
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p1">W2</div>
+      <div class="week-info">
+        <div class="week-title">Functions + Error Handling + Files</div>
+        <div class="week-objective">Goal: Write modular programs using functions. Handle errors gracefully.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">08</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Functions — Basics</div>
+          <ul class="day-tasks">
+            <li>def keyword, parameters, return values</li>
+            <li>Default arguments, keyword arguments</li>
+            <li>*args and **kwargs (used heavily in FastAPI)</li>
+            <li>Scope: local vs global variables</li>
+            <li>Build: Refactor your Week 1 programs using functions</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ CodeWithHarry Python #9 (Hindi)</span>
+            <span class="resource-chip chip-yt">▶ Corey Schafer — Functions (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">09</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Lambda, Map, Filter — Functional Python</div>
+          <ul class="day-tasks">
+            <li>lambda functions — anonymous one-liners</li>
+            <li>map() — apply function to list</li>
+            <li>filter() — filter list elements</li>
+            <li>zip() — combine two lists</li>
+            <li>sorted() with key argument</li>
+            <li>Practice: 10 one-liner programs using these</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer Lambda/Map/Filter (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">10</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Error Handling — try/except</div>
+          <ul class="day-tasks">
+            <li>try, except, else, finally blocks</li>
+            <li>Common exceptions: ValueError, TypeError, KeyError, IndexError, FileNotFoundError</li>
+            <li>Raising custom exceptions with raise</li>
+            <li>Why this matters: Every API must handle errors properly</li>
+            <li>Build: Enhanced calculator with full error handling</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ CodeWithHarry Python Exceptions (Hindi)</span>
+            <span class="resource-chip chip-practice">Add error handling to all previous programs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">11</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">File I/O — Read and Write Files</div>
+          <ul class="day-tasks">
+            <li>open(), read(), write(), close()</li>
+            <li>with statement (context manager — very important)</li>
+            <li>Read/write text files, CSV files using csv module</li>
+            <li>JSON module: json.load(), json.dump() — critical for APIs</li>
+            <li>Build: Student record system — save to file, read from file</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer File Objects (English)</span>
+            <span class="resource-chip chip-doc">docs.python.org/3/library/json.html</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">12</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Modules and Packages</div>
+          <ul class="day-tasks">
+            <li>import statement, from X import Y</li>
+            <li>Standard library: os, sys, datetime, random, math</li>
+            <li>pip install — installing third-party packages</li>
+            <li>Virtual environments: python -m venv env (must know)</li>
+            <li>Build: Create your own module and import it</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer Modules (English)</span>
+            <span class="resource-chip chip-practice">Practice venv setup — will use every project</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">13</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Mini-Project Day — CLI App</div>
+          <ul class="day-tasks">
+            <li>Build a complete CLI (command-line) Contact Book app</li>
+            <li>Features: Add contact, view all, search by name, delete, save to JSON file</li>
+            <li>Use functions, error handling, file I/O, dicts — everything from Week 1–2</li>
+            <li>This is your first real project — do it 100% yourself</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-build">Full day — build only</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card rest">
+        <div class="day-num-col"><span class="day-num" style="color:var(--dim)">14</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title" style="color:var(--muted)">Rest + Push to GitHub</div>
+          <ul class="day-tasks">
+            <li>Create GitHub account if you don't have one</li>
+            <li>Push your Contact Book project to GitHub</li>
+            <li>Write a basic README.md for the project</li>
+            <li>Rest — max 1 hour of study</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WEEK 3 -->
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p1">W3</div>
+      <div class="week-info">
+        <div class="week-title">OOP — Object Oriented Programming (Most Important Week)</div>
+        <div class="week-objective">Goal: Fully understand OOP. Every interview asks this. Cannot skip.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">15</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Classes and Objects</div>
+          <ul class="day-tasks">
+            <li>class keyword, __init__ method, self parameter</li>
+            <li>Instance variables vs class variables</li>
+            <li>Instance methods, class methods (@classmethod), static methods (@staticmethod)</li>
+            <li>Create a BankAccount class with deposit, withdraw, balance methods</li>
+            <li>Create 3 objects from 1 class — understand how instances work</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer OOP Part 1+2 (English) ⭐ BEST</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">16</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Inheritance</div>
+          <ul class="day-tasks">
+            <li>Parent and child classes</li>
+            <li>super() — calling parent methods</li>
+            <li>Method overriding</li>
+            <li>Multiple inheritance (understand, not memorize)</li>
+            <li>Build: Animal → Dog, Cat classes. Employee → Manager, Developer classes</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer OOP Part 3+4 (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">17</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Encapsulation and Polymorphism</div>
+          <ul class="day-tasks">
+            <li>Encapsulation: private (_var) and public variables</li>
+            <li>@property decorator — getters and setters</li>
+            <li>Polymorphism: same method name, different behavior</li>
+            <li>Dunder methods: __str__, __repr__, __len__, __eq__</li>
+            <li>Build: Shape class → Circle, Rectangle with area() polymorphism</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer OOP Part 5+6 (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">18</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Decorators (Interview Favourite)</div>
+          <ul class="day-tasks">
+            <li>Functions as first-class objects</li>
+            <li>How decorators work — wrapping a function</li>
+            <li>Write your own decorator from scratch</li>
+            <li>Common decorators: @staticmethod, @classmethod, @property</li>
+            <li>Why this matters: FastAPI uses decorators (@app.get, @app.post) everywhere</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer Decorators (English) ⭐</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">19</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Generators + Iterators</div>
+          <ul class="day-tasks">
+            <li>Iterators: __iter__ and __next__</li>
+            <li>yield keyword — generators</li>
+            <li>Generator expressions</li>
+            <li>Why generators matter: memory efficiency for large data</li>
+            <li>Practice: Write a generator for Fibonacci sequence</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer Generators (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">20</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">OOP Revision + Practice</div>
+          <ul class="day-tasks">
+            <li>Revise all OOP concepts from Days 15–19</li>
+            <li>Without looking at notes: explain class, object, inheritance, polymorphism, encapsulation</li>
+            <li>Solve 10 OOP problems from GeeksForGeeks Python OOP section</li>
+            <li>Read: top 20 Python OOP interview questions on InterviewBit</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-read">geeksforgeeks.org — Python OOP exercises</span>
+            <span class="resource-chip chip-read">interviewbit.com — Python OOP interview Qs</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card rest">
+        <div class="day-num-col"><span class="day-num" style="color:var(--dim)">21</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title" style="color:var(--muted)">Rest + Review Week 3</div>
+          <ul class="day-tasks">
+            <li>Light review of OOP notes (30 min max)</li>
+            <li>Push any new code to GitHub</li>
+            <li>Rest. Week 4 starts the web fundamentals — big shift.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- WEEK 4 -->
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p1">W4</div>
+      <div class="week-info">
+        <div class="week-title">How the Web Works + Git + Advanced Python</div>
+        <div class="week-objective">Goal: Understand what happens when a browser hits an API. Learn Git properly.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">22</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">How the Web Works (Non-Negotiable)</div>
+          <ul class="day-tasks">
+            <li>Client-server architecture</li>
+            <li>HTTP request cycle: client sends request → server processes → sends response</li>
+            <li>HTTP methods: GET, POST, PUT, PATCH, DELETE — when to use each</li>
+            <li>HTTP status codes: 200, 201, 400, 401, 403, 404, 422, 500 — memorize these</li>
+            <li>Headers, body, query params, path params — what are they</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Traversy Media HTTP Crash Course (English — 30 min)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">23</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">REST API Concepts</div>
+          <ul class="day-tasks">
+            <li>What is an API? What is REST?</li>
+            <li>6 REST constraints (stateless, client-server, uniform interface etc.)</li>
+            <li>JSON structure — objects, arrays, nesting</li>
+            <li>Use Postman or Thunder Client (VS Code) to call a real public API</li>
+            <li>Call JSONPlaceholder API — GET posts, GET user, POST new todo</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Traversy Media REST API Concepts (English)</span>
+            <span class="resource-chip chip-practice">jsonplaceholder.typicode.com — free test API</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">24</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Git + GitHub — Full Setup</div>
+          <ul class="day-tasks">
+            <li>git init, git add, git commit -m, git status, git log</li>
+            <li>git push, git pull, git clone</li>
+            <li>Branching: git branch, git checkout, git merge</li>
+            <li>Create a new repo on GitHub, push your Contact Book project</li>
+            <li>Practice: make 5 commits with meaningful messages</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Kunal Kushwaha Git & GitHub in 1 video (Hindi/English) ⭐</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">25</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Async/Await in Python</div>
+          <ul class="day-tasks">
+            <li>Synchronous vs asynchronous code — core concept</li>
+            <li>asyncio module, async def, await keyword</li>
+            <li>Why FastAPI is async — understand this deeply</li>
+            <li>I/O bound vs CPU bound — when to use async</li>
+            <li>Write 3 async programs: simulated API calls with asyncio.sleep</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ ArjanCodes Async Python (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">26</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Python Requests Library — Calling APIs from Python</div>
+          <ul class="day-tasks">
+            <li>pip install requests</li>
+            <li>requests.get(), requests.post() with JSON body</li>
+            <li>Handle response: .json(), .status_code, .headers</li>
+            <li>Build: Python script that fetches GitHub profile data using GitHub API</li>
+            <li>Build: Weather fetcher using OpenWeatherMap free API</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Corey Schafer Requests Library (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">27</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Python Interview Prep — Core Concepts</div>
+          <ul class="day-tasks">
+            <li>Read + write answers to: mutable vs immutable, GIL, list vs tuple vs set vs dict</li>
+            <li>Deep copy vs shallow copy</li>
+            <li>*args and **kwargs with examples</li>
+            <li>Practice: explain every OOP concept aloud without reading notes</li>
+            <li>Read top 50 Python interview questions on InterviewBit — just read, don't memorize</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-read">interviewbit.com/python-interview-questions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card rest">
+        <div class="day-num-col"><span class="day-num" style="color:var(--dim)">28</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title" style="color:var(--muted)">Rest Day</div>
+          <ul class="day-tasks">
+            <li>Month 1 is almost done. You know Python basics now.</li>
+            <li>Rest. Don't study.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MONTH 2 WEEKS 5-8 -->
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p1">W5</div>
+      <div class="week-info">
+        <div class="week-title">SQL + PostgreSQL — Weeks 5–6 (Days 29–42)</div>
+        <div class="week-objective">Goal: Write complex SQL queries confidently. Every backend role needs this.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">29</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">SQL Basics — SELECT, INSERT, UPDATE, DELETE</div>
+          <ul class="day-tasks">
+            <li>Install PostgreSQL + pgAdmin (free GUI tool)</li>
+            <li>CREATE TABLE, DROP TABLE, ALTER TABLE</li>
+            <li>Data types: VARCHAR, INTEGER, BOOLEAN, TIMESTAMP, TEXT</li>
+            <li>INSERT INTO, SELECT * FROM, WHERE clause</li>
+            <li>UPDATE, DELETE with WHERE</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ freeCodeCamp SQL Full Course (English) — start here</span>
+            <span class="resource-chip chip-practice">sqlzoo.net — Level 1 to 3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">30</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">SQL JOINs — Most Important SQL Topic</div>
+          <ul class="day-tasks">
+            <li>INNER JOIN — records that match in both tables</li>
+            <li>LEFT JOIN — all left + matching right records</li>
+            <li>RIGHT JOIN, FULL OUTER JOIN</li>
+            <li>Practice: Create users + orders tables, write JOIN queries</li>
+            <li>Self-join (employee-manager relationship)</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-practice">sqlzoo.net — Level 4 to 6 (JOINs section)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">31</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">SQL Aggregations + Subqueries</div>
+          <ul class="day-tasks">
+            <li>GROUP BY, HAVING, ORDER BY, LIMIT, OFFSET</li>
+            <li>COUNT(), SUM(), AVG(), MAX(), MIN()</li>
+            <li>Subqueries — queries inside queries</li>
+            <li>Practice: Find top 5 customers by total orders, monthly revenue report</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-practice">sqlzoo.net Level 7+ + HackerRank SQL Easy section</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">32</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Database Design — Schemas, Keys, Relations</div>
+          <ul class="day-tasks">
+            <li>Primary key, foreign key, unique constraint, NOT NULL</li>
+            <li>One-to-many, many-to-many relationships</li>
+            <li>Indexes: what they are, when to add them, why they speed up queries</li>
+            <li>Design: e-commerce DB schema (users, products, orders, order_items)</li>
+            <li>Draw this on paper — interviewers ask you to design schemas</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Lucidchart DB Design Tutorial (English — 30 min)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">33</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Transactions + ACID Properties</div>
+          <ul class="day-tasks">
+            <li>BEGIN, COMMIT, ROLLBACK</li>
+            <li>ACID: Atomicity, Consistency, Isolation, Durability — define each</li>
+            <li>Why transactions matter in banking/payments (interview context)</li>
+            <li>N+1 problem — what it is, why it kills performance, how to fix it</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-read">InterviewBit SQL interview questions section</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p1-card">
+        <div class="day-num-col"><span class="day-num p1">34</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">SQLAlchemy ORM — Python + PostgreSQL</div>
+          <ul class="day-tasks">
+            <li>pip install sqlalchemy psycopg2-binary</li>
+            <li>Define models as Python classes (not raw SQL)</li>
+            <li>Create tables, insert records, query, update, delete using SQLAlchemy</li>
+            <li>Relationships in SQLAlchemy: ForeignKey, relationship()</li>
+            <li>This is exactly how FastAPI connects to databases</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Patrick Loeber SQLAlchemy Tutorial (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card rest">
+        <div class="day-num-col"><span class="day-num" style="color:var(--dim)">35</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title" style="color:var(--muted)">Rest + SQL Practice</div>
+          <ul class="day-tasks">
+            <li>Solve 5 HackerRank SQL problems (Easy-Medium)</li>
+            <li>Rest after that</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="milestone">
+    <div class="milestone-title">✦ MONTH 2 CHECKPOINT — DAY 42</div>
+    <ul class="milestone-checks">
+      <li>Write Python classes, decorators, generators without help</li>
+      <li>Explain OOP (4 pillars) in an interview right now</li>
+      <li>Write complex SQL JOIN queries</li>
+      <li>Design a basic database schema on paper</li>
+      <li>Understand async/await in Python</li>
+      <li>Have 2+ projects on GitHub with README</li>
+      <li>Know all HTTP methods and status codes by heart</li>
+      <li>Can use SQLAlchemy to connect Python to PostgreSQL</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ==================== PHASE 2 ==================== -->
+<div id="phase2" class="phase-divider" style="background: linear-gradient(to right, var(--accent3), transparent);"></div>
+<div class="container">
+  <div class="phase-header">
+    <div class="phase-label p2">Phase 02 · Aug–Oct 2026</div>
+    <div class="phase-title p2">FASTAPI BACKEND</div>
+    <p class="phase-goal">"Build your first complete backend API from scratch. Every line — you write it. By day 90, you have Project 1 deployed live."</p>
+    <div class="phase-meta">
+      <span class="phase-pill p2" style="border-color:var(--accent3)">Days 43–90 · Months 2–3</span>
+      <span class="phase-pill" style="border-color:var(--border2); color:var(--muted)">3–4 hrs/day</span>
+      <span class="phase-pill" style="border-color:var(--accent3); color:var(--accent3)">Project 1 here</span>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p2">W7</div>
+      <div class="week-info">
+        <div class="week-title">FastAPI Core — Days 43–49</div>
+        <div class="week-objective">Start FastAPI. By end of week you can build a working API with 5+ endpoints.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p2-card">
+        <div class="day-num-col"><span class="day-num p2">43</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">FastAPI Setup + First Endpoint</div>
+          <ul class="day-tasks">
+            <li>pip install fastapi uvicorn</li>
+            <li>Create main.py, write first @app.get("/") endpoint</li>
+            <li>Run with: uvicorn main:app --reload</li>
+            <li>Open Swagger UI at localhost:8000/docs — understand auto-documentation</li>
+            <li>Path parameters: @app.get("/users/{user_id}")</li>
+            <li>Query parameters: @app.get("/items?skip=0&limit=10")</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">fastapi.tiangolo.com/tutorial — START HERE ⭐</span>
+            <span class="resource-chip chip-yt">▶ Hitesh Choudhary FastAPI playlist (Hindi)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p2-card">
+        <div class="day-num-col"><span class="day-num p2">44</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Pydantic Models — Request/Response Validation</div>
+          <ul class="day-tasks">
+            <li>from pydantic import BaseModel</li>
+            <li>Define request body models with type hints</li>
+            <li>Field validation, optional fields, default values</li>
+            <li>Response models — what to return vs what to hide (e.g. hide passwords)</li>
+            <li>Validation errors — FastAPI returns 422 automatically</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">fastapi.tiangolo.com/tutorial/body/</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p2-card">
+        <div class="day-num-col"><span class="day-num p2">45</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Database Integration — FastAPI + PostgreSQL</div>
+          <ul class="day-tasks">
+            <li>Connect FastAPI to PostgreSQL using SQLAlchemy</li>
+            <li>Create database.py, models.py, schemas.py (standard structure)</li>
+            <li>Dependency injection for DB session: Depends(get_db)</li>
+            <li>CRUD operations: Create, Read, Update, Delete through API</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">fastapi.tiangolo.com/tutorial/sql-databases/</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p2-card">
+        <div class="day-num-col"><span class="day-num p2">46</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">JWT Authentication — Login System</div>
+          <ul class="day-tasks">
+            <li>pip install python-jose passlib bcrypt</li>
+            <li>Understand JWT: header.payload.signature structure</li>
+            <li>Hash passwords with bcrypt — never store plain passwords</li>
+            <li>Create access token, verify token, protected routes</li>
+            <li>OAuth2PasswordBearer — FastAPI's built-in auth scheme</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">fastapi.tiangolo.com/tutorial/security/</span>
+            <span class="resource-chip chip-yt">▶ freeCodeCamp FastAPI full course — auth section</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p2-card">
+        <div class="day-num-col"><span class="day-num p2">47</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Error Handling in APIs + Middleware + CORS</div>
+          <ul class="day-tasks">
+            <li>HTTPException — raise custom errors with status codes</li>
+            <li>Custom exception handlers</li>
+            <li>CORS middleware (required for frontend to talk to your API)</li>
+            <li>Request/response middleware</li>
+            <li>Logging in FastAPI</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">fastapi.tiangolo.com/tutorial/handling-errors/</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p2-card project">
+        <div class="day-num-col"><span class="day-num p2">48</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">🏗️ START PROJECT 1 — URL Shortener API</div>
+          <ul class="day-tasks">
+            <li>Plan your schema: shortened_urls table (id, original_url, short_code, clicks, created_at)</li>
+            <li>Endpoints: POST /shorten, GET /{short_code} (redirect), GET /stats/{short_code}</li>
+            <li>Setup project folder structure: main.py, database.py, models.py, routers/urls.py</li>
+            <li>Write the database models and connect PostgreSQL</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-build">Build day — no tutorials</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card rest">
+        <div class="day-num-col"><span class="day-num" style="color:var(--dim)">49</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title" style="color:var(--muted)">Rest + Review FastAPI basics</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p2">W8–10</div>
+      <div class="week-info">
+        <div class="week-title">Complete Project 1 + Docker + Deploy — Days 50–70</div>
+        <div class="week-objective">First live deployed project. Interviewers will see this URL in your resume.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p2-card project">
+        <div class="day-num-col"><span class="day-num p2">50</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Project 1 — Complete Core Endpoints</div>
+          <ul class="day-tasks">
+            <li>Build POST /shorten endpoint — generate short code, save to DB</li>
+            <li>Build GET /{short_code} — look up original URL, increment click count, return redirect response</li>
+            <li>Build GET /stats/{short_code} — return click stats</li>
+            <li>Test all endpoints in Swagger UI / Postman</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-build">Project day</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p2-card">
+        <div class="day-num-col"><span class="day-num p2">53</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Docker — Containerize Your Project</div>
+          <ul class="day-tasks">
+            <li>What is Docker and why — understand concept</li>
+            <li>Write Dockerfile for your FastAPI app</li>
+            <li>docker-compose.yml — run FastAPI + PostgreSQL together</li>
+            <li>docker build + docker run your URL shortener</li>
+            <li>Push to DockerHub (free)</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ TechWorld with Nana Docker Crash Course (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p2-card">
+        <div class="day-num-col"><span class="day-num p2">56</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Deploy Project 1 to Railway / Render (Free)</div>
+          <ul class="day-tasks">
+            <li>Create account on Railway.app or Render.com (both free tier)</li>
+            <li>Connect your GitHub repo</li>
+            <li>Set environment variables (DB URL, secret key)</li>
+            <li>Deploy — get a live HTTPS URL</li>
+            <li>THIS IS YOUR FIRST LIVE PROJECT — screenshot it, put URL in resume</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">railway.app docs — deploy FastAPI guide</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card revision">
+        <div class="day-num-col"><span class="day-num" style="color:var(--purple)">60</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">📝 Month 2 Revision Day</div>
+          <ul class="day-tasks">
+            <li>Revise: Python OOP, decorators, async/await</li>
+            <li>Revise: SQL JOINs, ACID, indexes</li>
+            <li>Revise: FastAPI routing, Pydantic, JWT auth</li>
+            <li>Can you explain your URL Shortener project end-to-end?</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-read">Read your own code — can you explain every line?</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="milestone">
+    <div class="milestone-title">✦ DAY 90 CHECKPOINT — PROJECT 1 DONE</div>
+    <ul class="milestone-checks">
+      <li>URL Shortener API is live with a public URL</li>
+      <li>Code is on GitHub with README and setup instructions</li>
+      <li>Can explain JWT auth flow without notes</li>
+      <li>Can explain your DB schema and why you designed it that way</li>
+      <li>Docker-compose runs your project locally</li>
+      <li>Swagger docs auto-generated and accessible</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ==================== PHASE 3 ==================== -->
+<div id="phase3" class="phase-divider" style="background: linear-gradient(to right, var(--accent4), transparent);"></div>
+<div class="container">
+  <div class="phase-header">
+    <div class="phase-label p3">Phase 03 · Oct–Dec 2026</div>
+    <div class="phase-title p3">DEPTH + PROJECT 2</div>
+    <p class="phase-goal">"Redis, advanced DB patterns, testing, CI/CD. Build Project 2 — the one that gets you the interview call."</p>
+    <div class="phase-meta">
+      <span class="phase-pill p3" style="border-color:var(--accent4)">Days 91–150 · Months 4–5</span>
+      <span class="phase-pill" style="border-color:var(--border2); color:var(--muted)">3–4 hrs/day</span>
+      <span class="phase-pill" style="border-color:var(--accent4); color:var(--accent4)">Project 2 here</span>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p3">W13</div>
+      <div class="week-info">
+        <div class="week-title">Redis Caching + Advanced Patterns — Days 91–105</div>
+        <div class="week-objective">Add Redis to your skill set. Differentiate yourself from most freshers.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p3-card">
+        <div class="day-num-col"><span class="day-num p3">91</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Redis Fundamentals</div>
+          <ul class="day-tasks">
+            <li>What is Redis — in-memory key-value store</li>
+            <li>Install Redis locally (Docker: docker run -d -p 6379:6379 redis)</li>
+            <li>Redis data types: string, hash, list, set, sorted set</li>
+            <li>TTL — Time to Live, SET with EX option</li>
+            <li>Redis CLI: SET, GET, DEL, EXPIRE, TTL, KEYS</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ freeCodeCamp Redis Crash Course (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p3-card">
+        <div class="day-num-col"><span class="day-num p3">92</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Redis + FastAPI Integration</div>
+          <ul class="day-tasks">
+            <li>pip install redis aioredis</li>
+            <li>Cache-aside pattern: check cache first → if miss, hit DB → store in cache</li>
+            <li>Add caching to your URL Shortener: cache popular URLs in Redis</li>
+            <li>Cache invalidation: delete cache when URL is updated/deleted</li>
+            <li>Session storage concept using Redis</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-build">Add Redis to Project 1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p3-card">
+        <div class="day-num-col"><span class="day-num p3">95</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Testing with pytest</div>
+          <ul class="day-tasks">
+            <li>pip install pytest httpx</li>
+            <li>TestClient from FastAPI — send test HTTP requests</li>
+            <li>Write unit tests for each endpoint in Project 1</li>
+            <li>Fixtures — reusable test setup</li>
+            <li>Mocking database calls</li>
+            <li>pytest --cov for test coverage report</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">fastapi.tiangolo.com/tutorial/testing/</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p3-card">
+        <div class="day-num-col"><span class="day-num p3">98</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">GitHub Actions — CI/CD Pipeline</div>
+          <ul class="day-tasks">
+            <li>What is CI/CD: Continuous Integration / Continuous Deployment</li>
+            <li>Create .github/workflows/test.yml</li>
+            <li>On every push: run pytest automatically</li>
+            <li>Add a "build passing" badge to your GitHub README</li>
+            <li>This is what real companies use — having it shows you</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ TechWorld with Nana GitHub Actions (English)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p3-card project">
+        <div class="day-num-col"><span class="day-num p3">105</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">🏗️ START PROJECT 2 — Job Board API</div>
+          <ul class="day-tasks">
+            <li>Full CRUD: jobs, companies, users, applications</li>
+            <li>User roles: Admin (post jobs), Applicant (apply to jobs)</li>
+            <li>JWT auth for all protected routes</li>
+            <li>Filtering: GET /jobs?location=Bangalore&salary_min=500000</li>
+            <li>Pagination for job listings</li>
+            <li>Tests for every endpoint + CI/CD pipeline</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-build">Build over next 3 weeks — your most impressive project</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="milestone">
+    <div class="milestone-title">✦ DAY 150 CHECKPOINT — PHASE 3 DONE</div>
+    <ul class="milestone-checks">
+      <li>Project 2 (Job Board API) is live with CI/CD</li>
+      <li>Redis caching working in at least 1 project</li>
+      <li>20+ pytest tests written for your projects</li>
+      <li>GitHub Actions pipeline running on push</li>
+      <li>Can explain N+1 problem and how to fix it</li>
+      <li>Can explain cache-aside pattern</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ==================== PHASE 4 ==================== -->
+<div id="phase4" class="phase-divider" style="background: linear-gradient(to right, var(--purple), transparent);"></div>
+<div class="container">
+  <div class="phase-header">
+    <div class="phase-label p4">Phase 04 · Jan–Mar 2027</div>
+    <div class="phase-title p4">CLOUD + DSA + PROJECT 3</div>
+    <p class="phase-goal">"AWS basics, minimal DSA (just enough), and your final project that has AI integration — your unique edge."</p>
+    <div class="phase-meta">
+      <span class="phase-pill p4" style="border-color:var(--purple)">Days 151–270 · Months 6–9</span>
+      <span class="phase-pill" style="border-color:var(--border2); color:var(--muted)">3 hrs/day + 30 min DSA</span>
+      <span class="phase-pill" style="border-color:var(--purple); color:var(--purple)">Project 3 + AWS Cert</span>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p4">W22</div>
+      <div class="week-info">
+        <div class="week-title">AWS Fundamentals — Days 151–180</div>
+        <div class="week-objective">Deploy on AWS. Get Cloud Practitioner cert. Add AWS to resume.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p4-card">
+        <div class="day-num-col"><span class="day-num p4">151</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">AWS Core Services Overview</div>
+          <ul class="day-tasks">
+            <li>Create free AWS account (12-month free tier)</li>
+            <li>EC2: Virtual machine — where you run your FastAPI app</li>
+            <li>S3: Object storage — where you store files/images</li>
+            <li>RDS: Managed PostgreSQL on cloud</li>
+            <li>Lambda: Serverless functions concept</li>
+            <li>IAM: Users, roles, permissions — very important for security</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ freeCodeCamp AWS Practitioner 14hr (English) — start</span>
+            <span class="resource-chip chip-doc">skillbuilder.aws — Cloud Practitioner Essentials (free)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p4-card">
+        <div class="day-num-col"><span class="day-num p4">158</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Deploy FastAPI on AWS EC2</div>
+          <ul class="day-tasks">
+            <li>Launch EC2 instance (t2.micro — free tier)</li>
+            <li>SSH into server using key pair</li>
+            <li>Install Python, clone your GitHub repo</li>
+            <li>Run FastAPI with uvicorn, configure as systemd service</li>
+            <li>Set up security groups (allow port 80, 443, 22)</li>
+            <li>Your Project 1 or 2 is now on AWS — screenshot for resume</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ "Deploy FastAPI on AWS EC2" — YouTube search</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p4-card">
+        <div class="day-num-col"><span class="day-num p4">165</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">S3 File Upload Integration</div>
+          <ul class="day-tasks">
+            <li>Create S3 bucket, configure permissions</li>
+            <li>pip install boto3 — AWS SDK for Python</li>
+            <li>Upload file to S3 from FastAPI endpoint</li>
+            <li>Generate pre-signed URLs for private file access</li>
+            <li>Add file upload feature to Project 2</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">boto3.amazonaws.com/v1/documentation/api/latest/</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p4-card dsa">
+        <div class="day-num-col"><span class="day-num" style="color:var(--accent4)">170</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">🧩 DSA Begins — Arrays + Hashing (30 min/day from now)</div>
+          <ul class="day-tasks">
+            <li>Array basics: traversal, two pointers pattern, sliding window</li>
+            <li>LeetCode: Two Sum (#1), Contains Duplicate (#217), Best Time to Buy Stock (#121)</li>
+            <li>HashMap pattern: count frequencies, find duplicates</li>
+            <li>Target: 2–3 problems per day, Easy level only at start</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">neetcode.io/roadmap — Arrays & Hashing section first</span>
+            <span class="resource-chip chip-yt">▶ Striver A2Z Sheet — Arrays section (Hindi)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p4-card project">
+        <div class="day-num-col"><span class="day-num p4">180</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">🏗️ START PROJECT 3 — AI-Powered Document API</div>
+          <ul class="day-tasks">
+            <li>Concept: Upload PDF/text → AI analyzes → returns summary, keywords, Q&A</li>
+            <li>Stack: FastAPI + PostgreSQL + S3 (file storage) + OpenAI API or Gemini API</li>
+            <li>Endpoints: POST /documents/upload, GET /documents/{id}/summary, POST /documents/{id}/chat</li>
+            <li>This is your DIFFERENTIATOR — no other fresher will have AI + backend combined</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">platform.openai.com/docs (free $5 credit on signup)</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p4">W26–30</div>
+      <div class="week-info">
+        <div class="week-title">DSA Continuation + System Design + AWS Cert — Days 181–270</div>
+        <div class="week-objective">50–75 LeetCode problems done. System design basics. AWS cert if budget allows.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p4-card dsa">
+        <div class="day-num-col"><span class="day-num" style="color:var(--accent4)">185</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">DSA — Strings + Two Pointers</div>
+          <ul class="day-tasks">
+            <li>LeetCode: Valid Anagram (#242), Valid Palindrome (#125)</li>
+            <li>Two pointer technique: problems with sorted arrays</li>
+            <li>Sliding window: Maximum subarray sum</li>
+            <li>Daily: 2 problems in 30 min — time yourself</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">neetcode.io — Two Pointers section</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p4-card">
+        <div class="day-num-col"><span class="day-num p4">200</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">System Design — URL Shortener (In-depth)</div>
+          <ul class="day-tasks">
+            <li>Watch Gaurav Sen: "Design a URL Shortener" video</li>
+            <li>Understand: load balancer, database sharding, CDN concepts</li>
+            <li>Practice drawing architecture diagrams on paper</li>
+            <li>Design: Instagram-like backend (users, posts, followers, feed)</li>
+            <li>These will be asked at product startup interviews</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-yt">▶ Gaurav Sen System Design YouTube (English) ⭐</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p4-card dsa">
+        <div class="day-num-col"><span class="day-num" style="color:var(--accent4)">220</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">DSA — Linked Lists + Stack + Queue</div>
+          <ul class="day-tasks">
+            <li>Linked List: Reverse (#206), Middle of LL (#876), Detect Cycle (#141)</li>
+            <li>Stack: Valid Parentheses (#20), Min Stack (#155)</li>
+            <li>Queue: Implement Queue using Stacks (#232)</li>
+            <li>By now: 40+ problems done. Keep 30 min/day habit.</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">neetcode.io — Stack and Linked List sections</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p4-card dsa">
+        <div class="day-num-col"><span class="day-num" style="color:var(--accent4)">250</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">DSA — Binary Search (Last Section)</div>
+          <ul class="day-tasks">
+            <li>Binary Search (#704), Search in Rotated Array (#33), Find Min in Rotated (#153)</li>
+            <li>At this point: 60–75 problems done ✓</li>
+            <li>You are DSA-ready for startup interviews</li>
+            <li>Don't do Trees/Graphs/DP — not needed for your target companies</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">neetcode.io — Binary Search section (final DSA section)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p4-card">
+        <div class="day-num-col"><span class="day-num p4">270</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Resume + LinkedIn Final Update</div>
+          <ul class="day-tasks">
+            <li>Resume: Python Backend Developer | FastAPI | PostgreSQL | Redis | Docker | AWS | CI/CD</li>
+            <li>Add all 3 projects with live URLs and GitHub links</li>
+            <li>LinkedIn headline: "Python Backend Developer | FastAPI | AWS | MCA @ Kristu Jayanti"</li>
+            <li>LinkedIn: 500+ connections — connect with Bangalore tech people daily</li>
+            <li>Profile photo, About section, Skills section with endorsements</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-build">Full day — resume and LinkedIn only</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="milestone">
+    <div class="milestone-title">✦ DAY 270 CHECKPOINT — READY TO APPLY</div>
+    <ul class="milestone-checks">
+      <li>All 3 projects live with public URLs</li>
+      <li>60–75 LeetCode Easy/Medium done</li>
+      <li>AWS EC2 deployment on resume</li>
+      <li>Resume is 1 page, ATS-optimized</li>
+      <li>LinkedIn has 500+ connections</li>
+      <li>Can answer 80% of backend interview questions</li>
+      <li>Can design URL shortener + Instagram backend on whiteboard</li>
+      <li>CI/CD pipeline on all 3 projects</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- ==================== PHASE 5 ==================== -->
+<div id="phase5" class="phase-divider" style="background: linear-gradient(to right, var(--accent2), transparent);"></div>
+<div class="container">
+  <div class="phase-header">
+    <div class="phase-label p5">Phase 05 · Apr–Aug 2027</div>
+    <div class="phase-title p5">FULL HUNT MODE</div>
+    <p class="phase-goal">"Stop learning. Start applying. 10+ applications every single day. 3 mock interviews every week. One offer by August."</p>
+    <div class="phase-meta">
+      <span class="phase-pill p5" style="border-color:var(--accent2)">Days 271–420 · Months 10–14</span>
+      <span class="phase-pill" style="border-color:var(--border2); color:var(--muted)">4–5 hrs applications daily</span>
+      <span class="phase-pill" style="border-color:var(--accent2); color:var(--accent2)">Get the offer</span>
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p5">W39</div>
+      <div class="week-info">
+        <div class="week-title">Interview Prep Blitz — Days 271–300</div>
+        <div class="week-objective">Polish every answer. Mock interviews. Be ready for technical rounds.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p5-card">
+        <div class="day-num-col"><span class="day-num p5">271</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Python Interview Q&A Blitz</div>
+          <ul class="day-tasks">
+            <li>Write answers to top 50 Python questions from InterviewBit</li>
+            <li>Practice saying them aloud — not just reading</li>
+            <li>Topics: OOP, decorators, generators, async, GIL, list comprehension</li>
+            <li>Record yourself on phone — watch it back — fix awkward answers</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-read">interviewbit.com/python-interview-questions</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p5-card">
+        <div class="day-num-col"><span class="day-num p5">275</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">FastAPI + REST API Interview Q&A Blitz</div>
+          <ul class="day-tasks">
+            <li>Top 30 FastAPI questions from goodspace.ai/interview-questions/fastapi</li>
+            <li>REST API: HTTP methods, idempotency, versioning, status codes</li>
+            <li>Practice: "Tell me about your URL Shortener project" — 5-minute answer</li>
+            <li>Practice: "What challenges did you face in Project 2?" — honest answer</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-read">goodspace.ai/interview-questions/fastapi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p5-card">
+        <div class="day-num-col"><span class="day-num p5">280</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">First Mock Interview Day</div>
+          <ul class="day-tasks">
+            <li>Go to Pramp.com — schedule your first free mock interview</li>
+            <li>Interview a peer — take notes on what was hard</li>
+            <li>HR round prep: "Tell me about yourself" (2 min script), "Why backend dev?", "Where do you see yourself in 5 years?"</li>
+            <li>Do 3 mock interviews this week minimum</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">pramp.com — free peer mock interviews</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p5-card">
+        <div class="day-num-col"><span class="day-num p5">285</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Start Applying — Platform Setup</div>
+          <ul class="day-tasks">
+            <li>LinkedIn: Apply to every "Python Backend" or "FastAPI Developer" in Bangalore (Easy Apply)</li>
+            <li>Internshala: Filter internships → Python Backend → Bangalore → 2027 batch</li>
+            <li>Wellfound (AngelList): best for Bangalore startups — create profile today</li>
+            <li>Cutshort.io: AI-matched startup jobs — create profile</li>
+            <li>Cuvette.tech: good for MCA freshers — create profile</li>
+            <li>Target: 10 applications per day minimum</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">wellfound.com · cutshort.io · cuvette.tech</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="week-block">
+    <div class="week-header">
+      <div class="week-num p5">W43+</div>
+      <div class="week-info">
+        <div class="week-title">Active Job Hunt — Days 300–420</div>
+        <div class="week-objective">Apply every day. Interview every week. Negotiate. Accept the right offer.</div>
+      </div>
+    </div>
+    <div class="days-grid">
+
+      <div class="day-card p5-card">
+        <div class="day-num-col"><span class="day-num p5">300</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Daily Application Routine (Every Weekday)</div>
+          <ul class="day-tasks">
+            <li>Morning (1 hr): Apply to 10 jobs — LinkedIn, Wellfound, Naukri</li>
+            <li>Afternoon (1.5 hr): DSA revision — 2 problems to stay sharp</li>
+            <li>Evening (1.5 hr): Interview Q&A revision OR a mock session</li>
+            <li>Track everything: make a spreadsheet — company, date applied, status</li>
+            <li>Follow up via LinkedIn message after 5 days of no response</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-build">Build your application tracking spreadsheet</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p5-card">
+        <div class="day-num-col"><span class="day-num p5">350</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Internship-to-PPO Strategy (Critical)</div>
+          <ul class="day-tasks">
+            <li>Apply specifically for 6-month internships starting Jan 2027 on Internshala</li>
+            <li>PPO (Pre-Placement Offer) — perform well in internship → get full-time at ₹10–12 LPA</li>
+            <li>Target: Bangalore product startups offering stipend ₹25K–50K/month</li>
+            <li>This is the fastest and most realistic path to your 10 LPA goal</li>
+            <li>Don't wait for full-time roles only — internship route is faster</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-doc">internshala.com — Python backend internships Bangalore</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="day-card p5-card">
+        <div class="day-num-col"><span class="day-num p5">390</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">Salary Negotiation — When Offer Comes</div>
+          <ul class="day-tasks">
+            <li>Never accept first offer on the call — say "Can I have a day to review?"</li>
+            <li>Research: AmbitionBox + Glassdoor for company's salary range</li>
+            <li>Counter-offer: "Based on my skills and market research, I was expecting X–Y"</li>
+            <li>If they say ₹8 LPA → ask for ₹10–11 LPA confidently</li>
+            <li>Get at least 2 offers before accepting — leverage them</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="day-card checkpoint">
+        <div class="day-num-col"><span class="day-num" style="color:var(--accent)">420</span><span class="day-label">Day</span></div>
+        <div class="day-content">
+          <div class="day-title">🎯 Day 420 — MISSION COMPLETE</div>
+          <ul class="day-tasks">
+            <li>You have a signed offer letter for ₹10+ LPA</li>
+            <li>You built 3 deployed projects from scratch</li>
+            <li>You went from zero to a backend developer in 14 months</li>
+            <li>August 2027 — Adyaprana starts his career</li>
+          </ul>
+          <div class="day-resources">
+            <span class="resource-chip chip-build">Mission accomplished. Next: upgrade to senior in 2 years.</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-title">GO GET IT.</div>
+  <div class="footer-sig">Adyaprana Pradhan · Python Backend Developer · August 2027 · Bangalore</div>
+</footer>
+
+</body>
+</html>

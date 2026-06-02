@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adyaprana's 14-Month Roadmap</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --card: #16161f;
+    --border: #2a2a38;
+    --accent: #ff6b35;
+    --accent2: #7c3aed;
+    --accent3: #10b981;
+    --accent4: #f59e0b;
+    --text: #e8e8f0;
+    --muted: #888899;
+    --danger: #ef4444;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 60% at 20% 50%, rgba(124,58,237,0.12) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 30%, rgba(255,107,53,0.1) 0%, transparent 60%),
+      radial-gradient(ellipse 40% 60% at 60% 80%, rgba(16,185,129,0.07) 0%, transparent 50%);
+  }
+
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: 
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,107,53,0.15);
+    border: 1px solid rgba(255,107,53,0.4);
+    color: var(--accent);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 8vw, 80px);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -2px;
+  }
+
+  .hero h1 span.name {
+    color: var(--accent);
+  }
+
+  .hero h1 span.target {
+    background: linear-gradient(135deg, #10b981, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: clamp(16px, 3vw, 22px);
+    color: var(--muted);
+    margin-bottom: 40px;
+    margin-top: 12px;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 80px 20px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  .section-tag {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+
+  .section-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(24px, 5vw, 42px);
+    font-weight: 800;
+    margin-bottom: 40px;
+    letter-spacing: -1px;
+  }
+
+  /* BRUTAL TRUTH BOX */
+  .truth-box {
+    border: 2px solid var(--danger);
+    background: rgba(239,68,68,0.05);
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    position: relative;
+  }
+
+  .truth-box::before {
+    content: '⚠ HONEST REALITY';
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: var(--bg);
+    color: var(--danger);
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    padding: 0 8px;
+  }
+
+  .truth-box p {
+    color: #fca5a5;
+    line-height: 1.8;
+  }
+
+  .truth-box strong {
+    color: var(--danger);
+  }
+
+  /* DOMAIN CARD */
+  .domain-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent3);
+    padding: 32px;
+    margin-bottom: 24px;
+  }
+
+  .domain-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--accent3);
+  }
+
+  .domain-why {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .why-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .why-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent3);
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  /* PHASE TIMELINE */
+  .phases {
+    position: relative;
+  }
+
+  .phases::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--accent), var(--accent2), var(--accent3), var(--accent4));
+    opacity: 0.4;
+  }
+
+  .phase {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+    position: relative;
+  }
+
+  .phase-marker {
+    width: 58px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .phase-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    z-index: 1;
+    background: var(--bg);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  .phase-1 .phase-circle { border-color: var(--accent); color: var(--accent); }
+  .phase-2 .phase-circle { border-color: var(--accent2); color: var(--accent2); }
+  .phase-3 .phase-circle { border-color: var(--accent3); color: var(--accent3); }
+  .phase-4 .phase-circle { border-color: var(--accent4); color: var(--accent4); }
+
+  .phase-body {
+    flex: 1;
+  }
+
+  .phase-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .phase-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .phase-1 .phase-title { color: var(--accent); }
+  .phase-2 .phase-title { color: var(--accent2); }
+  .phase-3 .phase-title { color: var(--accent3); }
+  .phase-4 .phase-title { color: var(--accent4); }
+
+  .phase-months {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.05);
+    padding: 2px 10px;
+    border-radius: 2px;
+  }
+
+  .phase-goal {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    color: var(--muted);
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+
+  .topic-grid {
+    display: grid;
+    gap: 12px;
+  }
+
+  .topic-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid;
+    padding: 14px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .phase-1 .topic-item { border-left-color: var(--accent); }
+  .phase-2 .topic-item { border-left-color: var(--accent2); }
+  .phase-3 .topic-item { border-left-color: var(--accent3); }
+  .phase-4 .topic-item { border-left-color: var(--accent4); }
+
+  .topic-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .topic-content {}
+
+  .topic-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .topic-detail {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+
+  .topic-detail code {
+    background: rgba(255,255,255,0.08);
+    padding: 1px 5px;
+    border-radius: 2px;
+    color: var(--accent3);
+    font-size: 11px;
+  }
+
+  .week-tag {
+    font-size: 10px;
+    color: var(--accent4);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    display: block;
+  }
+
+  /* NO NEED BOX */
+  .no-need {
+    background: rgba(239,68,68,0.06);
+    border: 1px solid rgba(239,68,68,0.2);
+    padding: 24px 28px;
+    margin-bottom: 32px;
+  }
+
+  .no-need h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--danger);
+    margin-bottom: 12px;
+  }
+
+  .no-need ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .no-need ul li {
+    font-size: 13px;
+    color: #fca5a5;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .no-need ul li::before {
+    content: '✕';
+    color: var(--danger);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* DSA BOX */
+  .dsa-box {
+    background: rgba(245,158,11,0.06);
+    border: 1px solid rgba(245,158,11,0.3);
+    padding: 24px 28px;
+    margin-top: 32px;
+  }
+
+  .dsa-box h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent4);
+    margin-bottom: 8px;
+  }
+
+  /* RESOURCES GRID */
+  .resource-section {}
+
+  .resource-category {
+    margin-bottom: 40px;
+  }
+
+  .resource-category h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .resource-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .resource-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 14px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    transition: border-color 0.2s;
+  }
+
+  .resource-item:hover {
+    border-color: var(--accent);
+  }
+
+  .resource-flag {
+    width: 36px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  .resource-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    flex: 1;
+  }
+
+  .resource-tag {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .tag-hindi { background: rgba(255,107,53,0.15); color: var(--accent); border: 1px solid rgba(255,107,53,0.3); }
+  .tag-english { background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.3); }
+  .tag-both { background: rgba(16,185,129,0.15); color: var(--accent3); border: 1px solid rgba(16,185,129,0.3); }
+  .tag-free { background: rgba(245,158,11,0.1); color: var(--accent4); border: 1px solid rgba(245,158,11,0.3); font-size: 9px; }
+  .tag-paid { background: rgba(239,68,68,0.1); color: #f87171; border: 1px solid rgba(239,68,68,0.3); font-size: 9px; }
+
+  .resource-desc {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .resource-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+
+  /* INTERVIEW TABLE */
+  .interview-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+  }
+
+  .interview-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--surface);
+    font-family: 'Syne', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 2px solid var(--border);
+  }
+
+  .interview-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+    vertical-align: top;
+  }
+
+  .interview-table tr:hover td {
+    background: rgba(255,255,255,0.02);
+  }
+
+  .interview-table td:first-child {
+    font-weight: 600;
+    color: var(--text);
+    width: 180px;
+  }
+
+  .interview-table td.must {
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    width: 80px;
+  }
+
+  /* SALARY TABLE */
+  .salary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .salary-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    text-align: center;
+  }
+
+  .salary-card.target {
+    border-color: var(--accent3);
+    background: rgba(16,185,129,0.05);
+  }
+
+  .salary-range {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .salary-card:nth-child(1) .salary-range { color: var(--muted); }
+  .salary-card:nth-child(2) .salary-range { color: var(--accent4); }
+  .salary-card.target .salary-range { color: var(--accent3); }
+
+  .salary-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  /* WEEKLY SCHEDULE */
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  .schedule-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+  }
+
+  .schedule-day {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .schedule-hours {
+    font-size: 11px;
+    color: var(--muted);
+    background: rgba(255,107,53,0.1);
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+
+  .schedule-items {
+    list-style: none;
+  }
+
+  .schedule-items li {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 4px 0;
+    border-bottom: 1px dashed rgba(255,255,255,0.06);
+    display: flex;
+    gap: 8px;
+  }
+
+  .schedule-items li::before {
+    content: '→';
+    color: var(--accent3);
+    flex-shrink: 0;
+  }
+
+  /* PROJECT CHECKLIST */
+  .project-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .project-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .project-num {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--border);
+    flex-shrink: 0;
+    width: 40px;
+    line-height: 1;
+  }
+
+  .project-content {}
+
+  .project-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--text);
+  }
+
+  .project-stack {
+    font-size: 11px;
+    color: var(--accent3);
+    margin-bottom: 4px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .project-why {
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .project-phase {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 8px;
+    border-radius: 2px;
+    margin-left: auto;
+    flex-shrink: 0;
+    height: fit-content;
+  }
+
+  /* COMPANIES */
+  .company-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .company-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+  }
+
+  .company-type {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 8px;
+    color: var(--muted);
+  }
+
+  .company-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .company-salary {
+    font-size: 12px;
+    color: var(--accent3);
+    margin-bottom: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  .company-dsa {
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* CHECKPOINT */
+  .checkpoint {
+    background: rgba(16,185,129,0.06);
+    border: 1px solid rgba(16,185,129,0.25);
+    padding: 20px 24px;
+    margin-top: 24px;
+  }
+
+  .checkpoint h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent3);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .checkpoint ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .checkpoint ul li {
+    font-size: 12px;
+    color: #a7f3d0;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+
+  .checkpoint ul li::before {
+    content: '✓';
+    color: var(--accent3);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--border), transparent);
+    margin: 60px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .footer p {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto 16px;
+  }
+
+  .footer-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .domain-why { grid-template-columns: 1fr; }
+    .no-need ul { grid-template-columns: 1fr; }
+    .salary-grid { grid-template-columns: 1fr; }
+    .schedule-grid { grid-template-columns: 1fr; }
+    .company-grid { grid-template-columns: 1fr; }
+    .checkpoint ul { grid-template-columns: 1fr; }
+    .phases::before { left: 20px; }
+    .phase-marker { width: 44px; }
+  }
+
+  /* PRINT */
+  @media print {
+    body { background: white; color: black; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Personal Roadmap · Made for Adyaprana Pradhan</div>
+    <h1><span class="name">ADYA'S</span><br>PLAN</h1>
+    <p class="hero-sub">Python Backend Developer · Bangalore · August 2027</p>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-num">14</span>
+        <span class="stat-label">Months Left</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">1</span>
+        <span class="stat-label">Domain to Master</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Portfolio Projects</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">10+</span>
+        <span class="stat-label">LPA Target</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="domain-card">
+    <div class="domain-title">✅ Your Domain: Python Backend Developer (FastAPI + PostgreSQL + AWS)</div>
+    <p style="color: var(--muted); margin-bottom: 16px;">This is the ONE direction. Not full stack. Not ML. Not Java. Just this — done properly.</p>
+    <div class="domain-why">
+      <div class="why-item"><div class="why-dot"></div><div>You already have Flask/Django projects — not starting from zero</div></div>
+      <div class="why-item"><div class="why-dot"></div><div>FastAPI is now the #1 hired Python framework in Bangalore startups 2026</div></div>
+      <div class="why-item"><div class="why-dot"></div><div>Backend Python devs at startups earn ₹8–15 LPA at 2–3 years exp</div></div>
+      <div class="why-item"><div class="why-dot"></div><div>Companies like Razorpay, Swiggy, CRED, Zerodha actively hire this stack</div></div>
+      <div class="why-item"><div class="why-dot"></div><div>AI won't replace devs who understand systems — only those who don't</div></div>
+      <div class="why-item"><div class="why-dot"></div><div>Achievable in 14 months from near-zero with focused effort</div></div>
+    </div>
+  </div>
+
+  <div class="no-need">
+    <h3>❌ What You DON'T Need (Ignore These Completely)</h3>
+    <ul>
+      <li>Java / C++ / C# for backend (Python is enough)</li>
+      <li>React / Next.js / frontend frameworks</li>
+      <li>Deep ML / AI Engineering (needs strong math)</li>
+      <li>Competitive programming / CP platforms</li>
+      <li>Android / Flutter / mobile dev</li>
+      <li>SAP, Salesforce, ServiceNow</li>
+      <li>Microservices / Kubernetes (learn after job)</li>
+      <li>Deep DevOps / Terraform (basics only needed)</li>
+    </ul>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- 12 MONTH ROADMAP -->
+<section class="section">
+  <div class="section-tag">// The actual plan</div>
+  <h2 class="section-title">12-Month Roadmap</h2>
+
+  <div class="phases">
+
+    <!-- PHASE 1 -->
+    <div class="phase phase-1">
+      <div class="phase-marker">
+        <div class="phase-circle">01</div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-header">
+          <div class="phase-title">Foundation: Learn to Actually Code</div>
+          <div class="phase-months">Months 1–3 · June–Aug 2026</div>
+        </div>
+        <p class="phase-goal">"By end of Month 3 you can write Python without AI help, build a working API, and understand what you wrote."</p>
+
+        <div class="topic-grid">
+          <div class="topic-item">
+            <div class="topic-icon">🐍</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 1–3</span>
+              <div class="topic-name">Python Core — The Real Way</div>
+              <div class="topic-detail">
+                Variables, loops, functions, OOP (classes, inheritance), error handling, file I/O, list comprehensions. 
+                Don't skip OOP — every interview asks it. 
+                Use: <code>CodeWithHarry Python playlist (Hindi)</code> or <code>Corey Schafer Python OOP (English)</code>. 
+                Goal: Write 20 small programs from scratch with no AI.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🌐</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 4–5</span>
+              <div class="topic-name">How the Web Works (Non-Negotiable)</div>
+              <div class="topic-detail">
+                HTTP methods (GET, POST, PUT, DELETE, PATCH), status codes (200/201/400/401/403/404/500), 
+                JSON, headers, request/response cycle. 
+                You will be asked this in every interview. 
+                Use: <code>Traversy Media HTTP Crash Course</code> (30 mins, free YouTube).
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">⚡</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 5–8</span>
+              <div class="topic-name">FastAPI — Your Core Framework</div>
+              <div class="topic-detail">
+                Routes, path params, query params, Pydantic models for validation, response models, 
+                dependency injection basics, async/await, Swagger docs auto-generation. 
+                Use: <code>Official FastAPI docs (best docs in Python world)</code> + <code>Coding Entrepreneurs FastAPI YouTube</code>. 
+                Build: A working TODO API with full CRUD.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🗄️</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 6–10</span>
+              <div class="topic-name">SQL + PostgreSQL (Parallel with FastAPI)</div>
+              <div class="topic-detail">
+                SELECT, INSERT, UPDATE, DELETE, JOIN (inner/left/right), WHERE, GROUP BY, ORDER BY, LIMIT. 
+                Then: indexes, primary keys, foreign keys, transactions. 
+                Practice: <code>SQLZoo.net</code> (free), <code>Mode Analytics SQL Tutorial</code>. 
+                Then connect to FastAPI using <code>SQLAlchemy</code> ORM.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🔧</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 8–10</span>
+              <div class="topic-name">Git + GitHub — Properly</div>
+              <div class="topic-detail">
+                <code>git init</code>, <code>add</code>, <code>commit</code>, <code>push</code>, <code>pull</code>, branching, merging, 
+                resolving conflicts, pull requests. Write meaningful commit messages. 
+                Every project must be on GitHub with a README. 
+                Use: <code>Kunal Kushwaha Git & GitHub (Hindi/English)</code> — 1 video, covers everything.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkpoint">
+          <h4>✓ Phase 1 Checkpoint — Can you do all of this?</h4>
+          <ul>
+            <li>Write a Python class with methods without Googling</li>
+            <li>Build a FastAPI with 5 endpoints from scratch</li>
+            <li>Write a SQL JOIN query and explain it</li>
+            <li>Push your code to GitHub with clean commits</li>
+            <li>Explain what happens when you call a REST API</li>
+            <li>Handle errors and return proper HTTP status codes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="phase phase-2">
+      <div class="phase-marker">
+        <div class="phase-circle">02</div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-header">
+          <div class="phase-title">Depth: Build Real Stuff</div>
+          <div class="phase-months">Months 4–6 · Sep–Nov 2026</div>
+        </div>
+        <p class="phase-goal">"By end of Month 6 you have 2 portfolio-worthy projects deployed live that interviewers will ask about."</p>
+
+        <div class="topic-grid">
+          <div class="topic-item">
+            <div class="topic-icon">🔐</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 1–3</span>
+              <div class="topic-name">Authentication & Security</div>
+              <div class="topic-detail">
+                JWT tokens (access + refresh), OAuth2 password flow in FastAPI, bcrypt password hashing, 
+                middleware, CORS. These come up in EVERY backend interview. 
+                Understand: what is a token, where to store it, how to verify it, what happens on expiry.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🏗️</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 2–5</span>
+              <div class="topic-name">Database Design (Schema)</div>
+              <div class="topic-detail">
+                Normalization (1NF, 2NF, 3NF — just understand the concept), 
+                relationships (one-to-many, many-to-many), indexing strategy, 
+                Alembic migrations with SQLAlchemy. 
+                Practice: design DB schema for Instagram, Twitter, e-commerce. 
+                This is a system design lite question asked at startups.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🐳</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 4–6</span>
+              <div class="topic-name">Docker — Just the Basics</div>
+              <div class="topic-detail">
+                What is a container, Dockerfile, <code>docker build</code>, <code>docker run</code>, 
+                docker-compose (run FastAPI + PostgreSQL together locally). 
+                You don't need Kubernetes. Just containerize your project so you can deploy it. 
+                Use: <code>TechWorld with Nana Docker Beginner</code> (YouTube, English).
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">📦</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 5–8</span>
+              <div class="topic-name">Redis — Caching Basics</div>
+              <div class="topic-detail">
+                What is caching and why it matters, Redis data structures (strings, hashes, lists), 
+                TTL, cache-aside pattern, session storage. 
+                Not deep — just know: what is Redis, when to use it, basic implementation with FastAPI. 
+                This differentiates you from most freshers who have never touched it.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🧪</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 7–10</span>
+              <div class="topic-name">Testing — pytest</div>
+              <div class="topic-detail">
+                Unit tests, integration tests for APIs using <code>pytest</code> and <code>httpx</code> test client in FastAPI. 
+                How to mock database calls, test coverage basics. 
+                Most freshers skip this — knowing it makes you look senior. 
+                Write tests for your own projects.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkpoint">
+          <h4>✓ Phase 2 Checkpoint</h4>
+          <ul>
+            <li>Explain JWT auth end-to-end without notes</li>
+            <li>Design a database schema on paper in 10 minutes</li>
+            <li>Run your project with docker-compose up</li>
+            <li>Explain what Redis is and when you'd use it</li>
+            <li>Show 10+ unit tests for your API</li>
+            <li>Project 1 is deployed on Railway/Render/AWS EC2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="phase phase-3">
+      <div class="phase-marker">
+        <div class="phase-circle">03</div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-header">
+          <div class="phase-title">Cloud + Interview Prep Begins</div>
+          <div class="phase-months">Months 7–9 · Dec 2026–Feb 2027</div>
+        </div>
+        <p class="phase-goal">"By end of Month 9 you can answer 80% of backend interview questions and have AWS basics on your resume."</p>
+
+        <div class="topic-grid">
+          <div class="topic-item">
+            <div class="topic-icon">☁️</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 1–4</span>
+              <div class="topic-name">AWS Fundamentals (Core 4 Only)</div>
+              <div class="topic-detail">
+                EC2 (deploy your FastAPI here), S3 (store files/images), RDS (PostgreSQL on cloud), 
+                Lambda basics (serverless concept). That's it. 
+                No need for deep AWS. Get <code>AWS Cloud Practitioner</code> cert — ₹0 to study, ₹8,000 to appear. 
+                AZ-900 you already have — AWS adds more weight. 
+                Use: <code>FreeCodeCamp AWS Practitioner Course (YouTube)</code> — 14 hours, free.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🔄</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 3–6</span>
+              <div class="topic-name">CI/CD Basics</div>
+              <div class="topic-detail">
+                GitHub Actions — auto run tests on push, auto deploy to server. 
+                Setup a basic pipeline: push code → tests run → deploy. 
+                This shows you understand real-world engineering. 
+                One working pipeline on your GitHub is enough. 
+                Use: <code>TechWorld with Nana CI/CD YouTube</code>.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">💬</div>
+            <div class="topic-content">
+              <span class="week-tag">Weeks 5–10</span>
+              <div class="topic-name">System Design Basics (Startup Level)</div>
+              <div class="topic-detail">
+                Not Google-level system design. Startup level: 
+                Design URL shortener, design a backend for Instagram-like app, 
+                design an e-commerce cart. 
+                Topics: scalability concepts, load balancing (concept only), 
+                database sharding (concept), CDN (concept), message queues (concept). 
+                Use: <code>Gaurav Sen System Design YouTube</code> (English, incredible quality).
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">❓</div>
+            <div class="topic-content">
+              <span class="week-tag">Ongoing from Month 7</span>
+              <div class="topic-name">Interview Q&A — Start Now</div>
+              <div class="topic-detail">
+                Core Python Qs: OOP concepts, decorators, generators, context managers, GIL, 
+                mutable vs immutable. 
+                FastAPI Qs: async vs sync, Pydantic validation, dependency injection, middleware. 
+                DB Qs: indexing, N+1 problem, transactions, ACID. 
+                REST Qs: idempotency, statelessness, versioning, status codes. 
+                Use: <code>InterviewBit</code>, <code>GeeksForGeeks</code> Python backend section.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="checkpoint">
+          <h4>✓ Phase 3 Checkpoint</h4>
+          <ul>
+            <li>Deploy a FastAPI app on AWS EC2 (live URL)</li>
+            <li>CI/CD pipeline running on your GitHub</li>
+            <li>Can design URL shortener system on whiteboard</li>
+            <li>Answer 30 Python interview questions correctly</li>
+            <li>AWS Cloud Practitioner exam booked or passed</li>
+            <li>Project 2 is deployed, documented, on GitHub</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 4 -->
+    <div class="phase phase-4">
+      <div class="phase-marker">
+        <div class="phase-circle">04</div>
+      </div>
+      <div class="phase-body">
+        <div class="phase-header">
+          <div class="phase-title">Job Hunt: Apply Aggressively</div>
+          <div class="phase-months">Months 10–14 · Mar–Aug 2027</div>
+        </div>
+        <p class="phase-goal">"Full focus on applications, interviews, mock sessions, and negotiation. Learning slows down — execution takes over."</p>
+
+        <div class="topic-grid">
+          <div class="topic-item">
+            <div class="topic-icon">📄</div>
+            <div class="topic-content">
+              <span class="week-tag">Month 10</span>
+              <div class="topic-name">Resume + Portfolio Finalize</div>
+              <div class="topic-detail">
+                1-page resume: FastAPI, PostgreSQL, Docker, AWS, Redis, JWT, GitHub Actions. 
+                3 projects with live links + GitHub. 
+                LinkedIn: 500+ connections, headline = "Python Backend Developer | FastAPI | AWS | MCA @KJU". 
+                Portfolio site updated with new projects (you already have adyaprana.com ✓).
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🎯</div>
+            <div class="topic-content">
+              <span class="week-tag">Months 10–14</span>
+              <div class="topic-name">Apply: 10 Companies Per Day</div>
+              <div class="topic-detail">
+                Platforms: <code>LinkedIn</code> (most important), <code>Internshala</code> (internship-to-PPO), 
+                <code>Wellfound (AngelList)</code> for startups, <code>Cutshort.io</code>, <code>Naukri.com</code>, 
+                <code>Cuvette.tech</code>. 
+                Filter: Bangalore + Python Backend + 0–2 years exp. 
+                Internship with PPO (Pre-Placement Offer)
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🧠</div>
+            <div class="topic-content">
+              <span class="week-tag">Months 10–12</span>
+              <div class="topic-name">Mock Interviews (Critical)</div>
+              <div class="topic-detail">
+                Do 3 mock interviews per week — with real people, not just practice in your head. 
+                Use: <code>Pramp.com</code> (free peer mocks), <code>Interviewing.io</code> (free), 
+                find friends on LinkedIn to do mocks. 
+                Record yourself answering — your verbal explanations need to match your code knowledge.
+              </div>
+            </div>
+          </div>
+
+          <div class="topic-item">
+            <div class="topic-icon">🤝</div>
+            <div class="topic-content">
+              <span class="week-tag">Months 12–14</span>
+              <div class="topic-name">Negotiation + Final Prep</div>
+              <div class="topic-detail">
+                When you get an offer, negotiate for a better salary. 
+                Use: <code>Levels.fyi</code> to know market rates, <code>Parrot.ai</code> for negotiation scripts. 
+                Final prep: review your projects, be ready to explain every line of code, and practice common HR questions.
+              </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- DSA SECTION -->
+<section class="section">
+  <div class="section-tag">// The DSA question</div>
+  <h2 class="section-title">DSA: How Much Do You Actually Need?</h2>
+
+  <div class="dsa-box">
+    <h3>The honest answer for your target (Bangalore startups, 10 LPA)</h3>
+    <p style="color: #fde68a; margin-bottom: 16px;">
+      You do NOT need competitive programming. You do NOT need 500 LeetCode problems. 
+      But you need the basics — here's exactly what:
+    </p>
+    <table class="interview-table">
+      <thead>
+        <tr>
+          <th>Topic</th>
+          <th>Why</th>
+          <th>Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Arrays + Strings</td>
+          <td>Every OA has these. Most used in backend code.</td>
+          <td class="must">Must</td>
+        </tr>
+        <tr>
+          <td>HashMaps / Dicts</td>
+          <td>Most real-world backend problems use this</td>
+          <td class="must">Must</td>
+        </tr>
+        <tr>
+          <td>Two Pointers</td>
+          <td>Common in startup OAs</td>
+          <td class="must">Must</td>
+        </tr>
+        <tr>
+          <td>Sorting basics</td>
+          <td>Asked in phone screens frequently</td>
+          <td class="must">Must</td>
+        </tr>
+        <tr>
+          <td>Linked Lists</td>
+          <td>Classic interview topic, concept only</td>
+          <td style="color: var(--accent4); font-size:11px; font-weight:700; text-transform:uppercase">Basic</td>
+        </tr>
+        <tr>
+          <td>Binary Search</td>
+          <td>Appears in medium-level OAs</td>
+          <td style="color: var(--accent4); font-size:11px; font-weight:700; text-transform:uppercase">Basic</td>
+        </tr>
+        <tr>
+          <td>Stack / Queue</td>
+          <td>Used in real backend code too</td>
+          <td style="color: var(--accent4); font-size:11px; font-weight:700; text-transform:uppercase">Basic</td>
+        </tr>
+        <tr>
+          <td>Trees / Graphs</td>
+          <td>Only for FAANG/MNC — skip for now</td>
+          <td style="color: var(--muted); font-size:11px; font-weight:700; text-transform:uppercase">Skip</td>
+        </tr>
+        <tr>
+          <td>Dynamic Programming</td>
+          <td>Only for big companies — skip for now</td>
+          <td style="color: var(--muted); font-size:11px; font-weight:700; text-transform:uppercase">Skip</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="color: #fde68a; margin-top: 16px; font-size: 13px;">
+      <strong>Target: 50–75 LeetCode Easy/Medium problems.</strong> Spend 30 min/day from Month 7 onward. 
+      Use: <strong>NeetCode.io</strong> (best roadmap) + <strong>Striver's A2Z Sheet</strong> (first 2 sections only).
+    </p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 3 PORTFOLIO PROJECTS -->
+<section class="section">
+  <div class="section-tag">// What you'll build</div>
+  <h2 class="section-title">3 Projects That Get You Hired</h2>
+  <p style="color: var(--muted); margin-bottom: 28px; font-size: 13px;">These are not optional. These are what you show in interviews. Each one must be live, on GitHub, with a proper README.</p>
+
+  <div class="project-list">
+    <div class="project-card">
+      <div class="project-num">01</div>
+      <div class="project-content">
+        <div class="project-name">URL Shortener API (Bit.ly Clone)</div>
+        <div class="project-stack">FastAPI + PostgreSQL + Redis (caching) + Docker + Deployed on AWS EC2</div>
+        <div class="project-why">
+          Classic backend project every interviewer recognizes. Shows: REST API design, DB schema, caching with Redis, deployment. 
+          You can explain every line. Perfect for Month 3 — simple enough to build yourself but impactful enough to discuss.
+        </div>
+      </div>
+      <div class="project-phase" style="background:rgba(255,107,53,0.15); color:var(--accent); border: 1px solid rgba(255,107,53,0.3);">Phase 1</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">02</div>
+      <div class="project-content">
+        <div class="project-name">Job Board / Task Management API</div>
+        <div class="project-stack">FastAPI + PostgreSQL + JWT Auth + Docker Compose + GitHub Actions CI/CD</div>
+        <div class="project-why">
+          Shows full CRUD, authentication, user roles (admin/user), automated testing with pytest, 
+          CI/CD pipeline. Startups LOVE this — it mirrors what they actually build. 
+          Build from scratch yourself in Month 5–6.
+        </div>
+      </div>
+      <div class="project-phase" style="background:rgba(124,58,237,0.15); color:#a78bfa; border: 1px solid rgba(124,58,237,0.3);">Phase 2</div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-num">03</div>
+      <div class="project-content">
+        <div class="project-name">AI-Powered API Service (Your Edge)</div>
+        <div class="project-stack">FastAPI + OpenAI/Gemini API + PostgreSQL + AWS S3 + Full Deployment</div>
+        <div class="project-why">
+          Given your cybersecurity + AI background: build something like a document analysis API or 
+          a smart search backend that uses an LLM. This is your differentiator — most backend freshers 
+          don't have this. Combines your existing portfolio strength with solid backend engineering.
+        </div>
+      </div>
+      <div class="project-phase" style="background:rgba(16,185,129,0.15); color:var(--accent3); border: 1px solid rgba(16,185,129,0.3);">Phase 3</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RESOURCES -->
+<section class="section">
+  <div class="section-tag">// Where to learn</div>
+  <h2 class="section-title">Every Resource You Need</h2>
+
+  <div class="resource-section">
+
+    <div class="resource-category">
+      <h3>🎬 YouTube Channels</h3>
+      <div class="resource-list">
+        <div class="resource-item">
+          <div class="resource-flag">🇮🇳</div>
+          <div style="flex:1">
+            <div class="resource-name">CodeWithHarry</div>
+            <div class="resource-desc">Best Hindi Python full course. Structured playlists. Start here for Python basics + Django.</div>
+          </div>
+          <div class="resource-meta">
+            <span class="resource-tag tag-hindi">Hindi</span>
+            <span class="resource-tag tag-free">Free</span>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🇮🇳</div>
+          <div style="flex:1">
+            <div class="resource-name">Chai aur Code (Hitesh Choudhary)</div>
+            <div class="resource-desc">FastAPI playlist specifically. Practical, industry-level. Great for Phase 1 FastAPI learning.</div>
+          </div>
+          <div class="resource-meta">
+            <span class="resource-tag tag-hindi">Hindi</span>
+            <span class="resource-tag tag-free">Free</span>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🇮🇳</div>
+          <div style="flex:1">
+            <div class="resource-name">Kunal Kushwaha</div>
+            <div class="resource-desc">Git/GitHub, DevOps, Cloud crash courses. Best Git tutorial in Hindi+English. Essential for Phase 1.</div>
+          </div>
+          <div class="resource-meta">
+            <span class="resource-tag tag-both">Hindi+Eng</span>
+            <span class="resource-tag tag-free">Free</span>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🌍</div>
+          <div style="flex:1">
+            <div class="resource-name">Corey Schafer</div>
+            <div class="resource-desc">Best English Python OOP, Flask, Django tutorials. Deep explanations, essential for interviews.</div>
+          </div>
+          <div class="resource-meta">
+            <span class="resource-tag tag-english">English</span>
+            <span class="resource-tag tag-free">Free</span>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🌍</div>
+          <div style="flex:1">
+            <div class="resource-name">Gaurav Sen</div>
+            <div class="resource-desc">System Design explained simply. The best YouTube channel for startup-level system design. Phase 3 essential.</div>
+          </div>
+          <div class="resource-meta">
+            <span class="resource-tag tag-english">English</span>
+            <span class="resource-tag tag-free">Free</span>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🌍</div>
+          <div style="flex:1">
+            <div class="resource-name">TechWorld with Nana</div>
+            <div class="resource-desc">Docker + CI/CD. Best practical tutorials. Watch Docker Crash Course (1 hr) + GitHub Actions tutorial.</div>
+          </div>
+          <div class="resource-meta">
+            <span class="resource-tag tag-english">English</span>
+            <span class="resource-tag tag-free">Free</span>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🌍</div>
+          <div style="flex:1">
+            <div class="resource-name">freeCodeCamp (YouTube)</div>
+            <div class="resource-desc">Full courses: FastAPI (6hr), AWS Cloud Practitioner (14hr), PostgreSQL (4hr). All free, all on one channel.</div>
+          </div>
+          <div class="resource-meta">
+            <span class="resource-tag tag-english">English</span>
+            <span class="resource-tag tag-free">Free</span>
+          </div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🇮🇳</div>
+          <div style="flex:1">
+            <div class="resource-name">Striver (takeUforward)</div>
+            <div class="resource-desc">DSA in Python/Java. Use his A2Z Sheet — do first 2 sections only (Arrays + Hashing). Best DSA for India placements.</div>
+          </div>
+          <div class="resource-meta">
+            <span class="resource-tag tag-both">Hindi+Eng</span>
+            <span class="resource-tag tag-free">Free</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-category">
+      <h3>📚 Platforms & Websites</h3>
+      <div class="resource-list">
+        <div class="resource-item">
+          <div class="resource-flag">📘</div>
+          <div style="flex:1">
+            <div class="resource-name">FastAPI Official Docs (fastapi.tiangolo.com)</div>
+            <div class="resource-desc">Literally the best framework documentation ever written. Start-to-finish tutorial is better than any course.</div>
+          </div>
+          <div class="resource-meta"><span class="resource-tag tag-free">Free</span></div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🧩</div>
+          <div style="flex:1">
+            <div class="resource-name">NeetCode.io</div>
+            <div class="resource-desc">Best DSA roadmap. Filter: Easy + Medium only. 75 problems is your target, not 500.</div>
+          </div>
+          <div class="resource-meta"><span class="resource-tag tag-free">Free</span></div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🗄️</div>
+          <div style="flex:1">
+            <div class="resource-name">SQLZoo.net</div>
+            <div class="resource-desc">Best interactive SQL practice. Complete levels 1–7. Takes ~2 weeks at 1hr/day.</div>
+          </div>
+          <div class="resource-meta"><span class="resource-tag tag-free">Free</span></div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">💡</div>
+          <div style="flex:1">
+            <div class="resource-name">InterviewBit.com</div>
+            <div class="resource-desc">Python + Backend + System Design interview questions. Read all Python + REST API sections before interviews.</div>
+          </div>
+          <div class="resource-meta"><span class="resource-tag tag-free">Free</span></div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">☁️</div>
+          <div style="flex:1">
+            <div class="resource-name">AWS Skill Builder (skillbuilder.aws)</div>
+            <div class="resource-desc">Official free AWS learning. Cloud Practitioner Essentials course — free, 6 hours. Get the cert.</div>
+          </div>
+          <div class="resource-meta"><span class="resource-tag tag-free">Free</span></div>
+        </div>
+        <div class="resource-item">
+          <div class="resource-flag">🎙️</div>
+          <div style="flex:1">
+            <div class="resource-name">Pramp.com</div>
+            <div class="resource-desc">Free peer-to-peer mock interviews. Do 3/week from Month 10. Nothing prepares you like talking to a human.</div>
+          </div>
+          <div class="resource-meta"><span class="resource-tag tag-free">Free</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="resource-category">
+      <h3>🎙️ Podcasts / Extra</h3>
+      <div class="resource-list">
+        <div class="resource-item">
+          <div class="resource-flag">🎧</div>
+          <div style="flex:1">
+            <div class="resource-name">Syntax.fm Podcast</div>
+            <div class="resource-desc">Web dev podcast (English). Listen during commute. Keeps you updated on backend/API trends without extra study time.</div>
+          </div>
+          <div class="resource-meta"><span class="resource-tag tag-english">English</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- INTERVIEW TOPICS -->
+<section class="section">
+  <div class="section-tag">// What they'll ask you</div>
+  <h2 class="section-title">Interview Preparation Topics</h2>
+  <p style="color: var(--muted); margin-bottom: 28px; font-size: 13px;">These are the exact categories Bangalore startups test for Python Backend roles. Study in this order.</p>
+
+  <table class="interview-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Must-Know Topics</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Python Core</td>
+        <td>OOP (classes, inheritance, polymorphism), decorators, generators, list comprehensions, error handling, GIL basics, mutable vs immutable</td>
+        <td class="must">🔴 P1</td>
+      </tr>
+      <tr>
+        <td>FastAPI / Flask</td>
+        <td>Routing, Pydantic validation, async vs sync, middleware, dependency injection, JWT integration, Swagger docs</td>
+        <td class="must">🔴 P1</td>
+      </tr>
+      <tr>
+        <td>REST API Design</td>
+        <td>HTTP methods, status codes, idempotency, versioning (v1/v2), statelessness, pagination, rate limiting concept</td>
+        <td class="must">🔴 P1</td>
+      </tr>
+      <tr>
+        <td>SQL / PostgreSQL</td>
+        <td>JOINs, indexes, ACID properties, transactions, N+1 problem, query optimization basics, schema design</td>
+        <td class="must">🔴 P1</td>
+      </tr>
+      <tr>
+        <td>Authentication</td>
+        <td>JWT structure (header.payload.signature), OAuth2 flow, bcrypt hashing, token refresh strategy, session vs token</td>
+        <td class="must">🔴 P1</td>
+      </tr>
+      <tr>
+        <td>System Design (Basic)</td>
+        <td>Design URL shortener, design Instagram-like backend, load balancer concept, CDN concept, caching strategy</td>
+        <td style="color: var(--accent4); font-size:11px; font-weight:700; text-transform:uppercase; width:80px">🟡 P2</td>
+      </tr>
+      <tr>
+        <td>Docker / DevOps</td>
+        <td>What is containerization, Dockerfile, docker-compose, CI/CD concept, GitHub Actions</td>
+        <td style="color: var(--accent4); font-size:11px; font-weight:700; text-transform:uppercase">🟡 P2</td>
+      </tr>
+      <tr>
+        <td>Cloud (AWS)</td>
+        <td>EC2, S3, RDS, Lambda (concepts + basic usage), difference between IaaS/PaaS/SaaS</td>
+        <td style="color: var(--accent4); font-size:11px; font-weight:700; text-transform:uppercase">🟡 P2</td>
+      </tr>
+      <tr>
+        <td>Redis / Caching</td>
+        <td>Cache-aside pattern, TTL, when to use Redis vs DB, basic commands</td>
+        <td style="color: var(--accent3); font-size:11px; font-weight:700; text-transform:uppercase">🟢 P3</td>
+      </tr>
+      <tr>
+        <td>Testing</td>
+        <td>pytest basics, unit vs integration tests, mocking, test coverage concept</td>
+        <td style="color: var(--accent3); font-size:11px; font-weight:700; text-transform:uppercase">🟢 P3</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<div class="divider"></div>
+
+<!-- TARGET COMPANIES -->
+<section class="section">
+  <div class="section-tag">// Where to apply</div>
+  <h2 class="section-title">Companies to Target in Bangalore</h2>
+  <p style="color: var(--muted); margin-bottom: 4px; font-size: 13px;">Apply ONLY to these types. Skip service companies.</p>
+
+  <div class="company-grid">
+    <div class="company-card" style="border-top: 3px solid var(--accent3);">
+      <div class="company-type">Tier 1 Product — Dream Targets</div>
+      <div class="company-name" style="color: var(--accent3);">Razorpay, Zerodha, CRED, Swiggy</div>
+      <div class="company-salary">₹10–18 LPA fresher | Strong DSA + Projects</div>
+      <div class="company-dsa">Tough technical rounds. Need all 4 phases complete. Apply Month 12+.</div>
+    </div>
+
+    <div class="company-card" style="border-top: 3px solid var(--accent4);">
+      <div class="company-type">Tier 2 Startups — Main Target</div>
+      <div class="company-name" style="color: var(--accent4);">Series A/B Bangalore Startups</div>
+      <div class="company-salary">₹8–12 LPA fresher | Projects + Backend Skills</div>
+      <div class="company-dsa">Focus on your projects, backend fundamentals. Wellfound + LinkedIn. Apply Month 10+.</div>
+    </div>
+
+    <div class="company-card" style="border-top: 3px solid var(--accent2);">
+      <div class="company-type">Internship-to-PPO Path</div>
+      <div class="company-name" style="color: #a78bfa;">6-Month Internship @ Startup</div>
+      <div class="company-salary">₹25–50K/month stipend → PPO at ₹10–12 LPA</div>
+      <div class="company-dsa">Best strategy. Internshala + Cuvette.tech. Apply Month 9–10 for Jan 2027 intake.</div>
+    </div>
+
+    <div class="company-card" style="border-top: 3px solid var(--danger);">
+      <div class="company-type">Avoid These</div>
+      <div class="company-name" style="color: var(--danger);">TCS, Infosys, Wipro (as first job)</div>
+      <div class="company-salary">₹3.5–5 LPA fresher — wastes your 14 months</div>
+      <div class="company-dsa">Service company trap. Hard to break out. Use only as last resort backup.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WEEKLY SCHEDULE -->
+<section class="section">
+  <div class="section-tag">// Daily execution</div>
+  <h2 class="section-title">Your Weekly Schedule (Phases 1–3)</h2>
+
+  <div class="schedule-grid">
+    <div class="schedule-card">
+      <div class="schedule-day">Monday – Wednesday <span class="schedule-hours">3–4 hrs/day</span></div>
+      <ul class="schedule-items">
+        <li>Current phase main topic (2 hrs deep work)</li>
+        <li>Build / code something from scratch (1 hr)</li>
+        <li>Push to GitHub + write commit message</li>
+      </ul>
+    </div>
+    <div class="schedule-card">
+      <div class="schedule-day">Thursday – Friday <span class="schedule-hours">2–3 hrs/day</span></div>
+      <ul class="schedule-items">
+        <li>Interview Q&A revision (30 min)</li>
+        <li>DSA problems — 1–2 LeetCode easy/medium (Month 7+)</li>
+        <li>Continue project work</li>
+      </ul>
+    </div>
+    <div class="schedule-card">
+      <div class="schedule-day">Saturday <span class="schedule-hours">5–6 hrs</span></div>
+      <ul class="schedule-items">
+        <li>Deep project work — biggest session of week</li>
+        <li>Watch YouTube tutorials for next week's topics</li>
+        <li>Update portfolio / GitHub README</li>
+      </ul>
+    </div>
+    <div class="schedule-card">
+      <div class="schedule-day">Sunday <span class="schedule-hours">1–2 hrs only</span></div>
+      <ul class="schedule-items">
+        <li>Review what you learned this week</li>
+        <li>Plan next week's topics</li>
+        <li>Rest — burnout kills more careers than laziness</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="divider"></div>
+<footer class="footer">
+  <p>"The market is brutal. But someone will get hired. Make sure it's you — not because you worked the hardest, but because you worked on the right things."</p>
+  <div class="footer-name">ADYAPRANA PRADHAN · AUGUST 2027 · BANGALORE</div>
+  <p style="font-size: 11px; color: var(--muted); margin-top: 16px; font-style: normal; font-family: 'IBM Plex Mono', monospace;">adyaprana.com · adyaprana21@gmail.com · github.com/Adyaprana</p>
+</footer>
+
+</body>
+</html>
