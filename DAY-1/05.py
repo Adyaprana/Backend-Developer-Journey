@@ -1,3 +1,4 @@
+# This is the fifth file of the Backend Developer Journey. In this file, we will learn about the type() function and how to use it to check the data type of a variable.
 name = "Adyaprana"
 age = 23
 cgpa = 8.5

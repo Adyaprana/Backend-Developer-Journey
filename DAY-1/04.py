@@ -1,3 +1,4 @@
+# This is the fourth file of the Backend Developer Journey. In this file, we will learn about different data types in Python and how to use them.
 name = "Adyaprana Pradhan"
 age = 22
 cgpa = 9.5
