@@ -734,16 +734,16 @@ Converts string into list.
 
 # 🏆 Day 2 Success Checklist
 
-* [x] Learned input()
-* [x] Learned type conversion
-* [x] Learned arithmetic operators
-* [x] Learned string methods
-* [x] Learned string slicing
-* [x] Learned f-strings
-* [x] Built calculator project
-* [x] Built area calculator project
-* [x] Practiced user input programs
-* [x] Understood backend use cases
+* ✅ Learned input()
+* ✅ Learned type conversion
+* ✅ Learned arithmetic operators
+* ✅ Learned string methods
+* ✅ Learned string slicing
+* ✅ Learned f-strings
+* ✅ Built calculator project
+* ✅ Built area calculator project
+* ✅ Practiced user input programs
+* ✅ Understood backend use cases
 
 ---
 
