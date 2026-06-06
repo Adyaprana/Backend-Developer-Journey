@@ -8,7 +8,7 @@
 
 # 📌 Topics Covered
 
-## 1. i✅
+## 1. if✅
 
 ## 2. if-else Statement
 
