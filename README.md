@@ -158,9 +158,34 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 </details>
 
 <details>
-<summary><b>⬜ Day 3 — Conditions (if / elif / else)</b></summary>
+<summary><b>✅ Day 3 — Conditions (if / elif / else)</b></summary>
 
-Planned
+### Topics Covered
+
+* User Input Learned if
+* Learned if-else
+* Learned elif
+* Learned comparison operators
+* Learned logical operators
+* Learned nested if
+* Learned membership operator
+* Built grade calculator
+* Solved FizzBuzz
+* Practiced decision-making problems
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* DAY-3 (Topics).png
+* DAY-3.md
+
+✅ Completed
 
 </details>
 
