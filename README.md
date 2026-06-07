@@ -190,9 +190,40 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 </details>
 
 <details>
-<summary><b>⬜ Day 4 — Loops</b></summary>
+<summary><b>✅ Day 4 — Loops (for / while / nested loops)</b></summary>
 
-Planned
+### Topics Covered
+
+* Learned for loop
+* Learned range()
+* Learned enumerate()
+* Learned string iteration
+* Learned list iteration
+* Learned while loop
+* Learned break
+* Learned continue
+* Learned nested loops
+* Built multiplication table
+* Built reverse string program
+* Built prime checker
+* Printed primes 1–100
+* Solved pattern programs
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* 08.py
+* 09.py
+* DAY-4 (Topics).png
+* DAY-4.md
+
+✅ Completed
 
 </details>
 
