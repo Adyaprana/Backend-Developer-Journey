@@ -263,9 +263,39 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 </details>
 
 <details>
-<summary><b>⬜ Day 6 — Dictionaries & Sets</b></summary>
+<summary><b>✅ Day 6 — Dictionaries & Sets</b></summary>
 
-Planned
+### Topics Covered
+
+* Learned Dictionaries
+* Learned get()
+* Learned update/delete
+* Learned keys()
+* Learned values()
+* Learned items()
+* Learned Dictionary Looping
+* Learned Nested Dictionaries
+* Learned Sets
+* Learned Set Operations
+* Learned Dictionary Comprehension
+* Built Student Grade Book
+* Built Word Frequency Counter
+
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* 08.py
+* DAY-6 (Topics).png
+* DAY-6.md
+
+✅ Completed
 
 </details>
 
@@ -276,6 +306,22 @@ Planned
 
 </details>
 
+<details>
+<summary><b>⬜ Day 8 — Functions </b></summary>
+
+Planned
+
+</details>
+<details>
+<summary><b>⬜ Day 9 — Functional Python: Lambda, Map, Filter, Zip & Sorted</b></summary>
+
+Planned
+
+</details>
+
+<summary><b>...</b></summary>
+
+</details>
 ---
 
 # 🏗️ Planned Projects
