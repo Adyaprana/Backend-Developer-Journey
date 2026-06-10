@@ -300,9 +300,38 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 </details>
 
 <details>
-<summary><b>⬜ Day 7 — Weekly Revision</b></summary>
+<summary><b>✅ Day 7 — Weekly Revision</b></summary>
 
-Planned
+### Topics Covered
+
+ 🏆 Week 1 Success Checklist
+
+* Python Installed
+* VS Code Installed
+* Variables Learned
+* Input Learned
+* Conditions Learned
+* Loops Learned
+* Lists Learned
+* Tuples Learned
+* Dictionaries Learned
+* Sets Learned
+* Built 10+ Programs
+* Built Mini Projects
+* Understood Backend Basics
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.txt
+* 05.py
+* DAY-7 (Topics).png
+* DAY-7.md
+
+✅ Completed
+
 
 </details>
 
