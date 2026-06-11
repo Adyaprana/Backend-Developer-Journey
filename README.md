@@ -336,9 +336,37 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 </details>
 
 <details>
-<summary><b>⬜ Day 8 — Functions </b></summary>
+<summary><b>✅ Day 8 — Functions </b></summary>
 
-Planned
+
+### Topics Covered
+
+* Learned Functions
+* Learned Parameters
+* Learned Arguments
+* Learned Return Values
+* Learned Default Arguments
+* Learned Keyword Arguments
+* Learned *args
+* Learned **kwargs
+* Learned Local Scope
+* Learned Global Scope
+* Learned Docstrings
+* Learned Type Hints
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* DAY-8 (Topics).png
+* DAY-8.md
+* DAY-8.txt
+
+✅ Completed
 
 </details>
 <details>
