@@ -370,13 +370,58 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 <details>
-<summary><b>⬜ Day 9 — Functional Python: Lambda, Map, Filter, Zip & Sorted</b></summary>
+<summary><b>✅ Day 9 — Functional Python: Lambda, Map, Filter, Zip & Sorted</b></summary>
 
-Planned
+### Topics Covered
+
+- ✅ Learned Functional Programming
+- ✅ Learned Lambda Functions
+- ✅ Learned map()
+- ✅ Learned filter()
+- ✅ Learned zip()
+- ✅ Learned sorted()
+- ✅ Learned key parameter
+- ✅ Learned map vs comprehension
+- ✅ Learned filter vs comprehension
+- ✅ Learned reduce()
+- ✅ Learned any()
+- ✅ Learned all()
+- ✅ Built ranking system logic
+- ✅ Built product processor logic
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* DAY-8 (Topics).png
+* DAY-8.md
+* DAY-8.txt
+
+✅ Completed
 
 </details>
 
-<summary><b>...</b></summary>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary><b>⬜ Day xxx /b></summary>
+
+Planned
 
 </details>
 ---
