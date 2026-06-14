@@ -397,9 +397,92 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 * 04.py
 * 05.py
 * 06.py
-* DAY-8 (Topics).png
-* DAY-8.md
-* DAY-8.txt
+* DAY-9 (Topics).png
+* DAY-9.md
+* DAY-9.txt
+
+✅ Completed
+
+</details>
+<details>
+<summary><b>✅ Day 10 — Error Handling, Exceptions & Defensive Programming</b></summary>
+
+### Topics Covered
+
+- ✅ Learned Exceptions
+- ✅ Learned try
+- ✅ Learned except
+- ✅ Learned else
+- ✅ Learned finally
+- ✅ Learned specific exceptions
+- ✅ Learned exception objects
+- ✅ Learned raise
+- ✅ Learned custom exceptions
+- ✅ Learned assertions
+- ✅ Learned logging basics
+- ✅ Learned EAFP vs LBYL
+- ✅ Learned backend error handling patterns
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* DAY-10 (Topics).png
+* DAY-10.md
+* DAY-10.txt
+
+✅ Completed
+
+</details>
+<details>
+<summary><b>✅ Day 11 — File I/O, CSV, JSON & Data Persistence</b></summary>
+
+### Topics Covered
+
+- ✅ Learned File I/O
+- ✅ Learned File Modes
+- ✅ Learned File Paths
+- ✅ Learned File Pointers
+- ✅ Learned tell()
+- ✅ Learned seek()
+- ✅ Learned Context Managers
+- ✅ Learned UTF-8 Encoding
+- ✅ Learned CSV Files
+- ✅ Learned DictReader
+- ✅ Learned DictWriter
+- ✅ Learned JSON
+- ✅ Learned Serialization
+- ✅ Learned Deserialization
+- ✅ Learned Binary Files
+- ✅ Learned Backend JSON Concepts
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* DAY-11 (Topics).png
+* DAY-11.md
+* DAY-11.txt
+* contacts.json
+* emp.csv
+* emp.json
+* expenses.json
+* notes.txt
+* skills.txt
+* stu.json
+* student.json
+* student.txt
+* students.csv
+* students.json
 
 ✅ Completed
 
