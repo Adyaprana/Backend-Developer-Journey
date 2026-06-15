@@ -488,7 +488,45 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<summary><b>✅ Day 12 — Modules, Packages, pip, Virtual Environments & Python Ecosystem</b></summary>
 
+### Topics Covered
+
+- ✅ Learned Modules
+- ✅ Learned Packages
+- ✅ Learned Imports
+- ✅ Learned Import Styles
+- ✅ Learned __name__
+- ✅ Learned Standard Library
+- ✅ Learned math
+- ✅ Learned random
+- ✅ Learned datetime
+- ✅ Learned os
+- ✅ Learned sys
+- ✅ Learned pip
+- ✅ Learned PyPI
+- ✅ Learned Virtual Environments
+- ✅ Learned requirements.txt
+- ✅ Learned Dependency Management
+
+### Files
+* test/
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* calculator.py
+* DAY-12 (Topics).png
+* DAY-12.md
+* main.py
+
+
+✅ Completed
+
+</details>
 
 
 
