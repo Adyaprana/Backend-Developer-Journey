@@ -523,11 +523,37 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 * DAY-12.md
 * main.py
 
-
 ✅ Completed
-
 </details>
 
+
+<summary><b>✅ Day 13 — Software Development Thinking, CLI  Applications & CRUD Fundamentals</b></summary>
+
+### Topics Covered
+
+- ✅ Understood CLI Applications
+- ✅ Learned CRUD Operations
+- ✅ Learned Data Modeling
+- ✅ Learned State Management
+- ✅ Learned Persistence
+- ✅ Learned Validation Thinking
+- ✅ Learned Software Architecture Basics
+- ✅ Learned Separation Of Concerns
+- ✅ Learned Refactoring
+- ✅ Learned MVP Thinking
+- ✅ Learned Debugging Strategy
+- ✅ Learned Scalability Concepts
+- ✅ Built First Real Project
+
+### Files
+* 01.py
+* contacts.json
+* DAY-13 (Topics).png
+* DAY-13.md
+* Mini-Project.py
+
+✅ Completed
+</details>
 
 
 
