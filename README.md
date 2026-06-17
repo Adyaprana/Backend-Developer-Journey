@@ -555,7 +555,36 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 </details>
 
+<summary><b>✅ Day 14 — DSA Foundations, Arrays, HashMaps</b></summary>
 
+### Topics Covered
+
+- ✅ Learned DSA Fundamentals
+- ✅ Learned Arrays
+- ✅ Learned HashMaps
+- ✅ Learned Big O
+- ✅ Learned Brute Force Thinking
+- ✅ Learned Optimization
+- ✅ Learned Complement Technique
+- ✅ Learned Time Complexity
+- ✅ Learned Space Complexity
+- ✅ Learned Time-Space Tradeoff
+- ✅ Solved First LeetCode Problem
+- ✅ Learned Interview Problem Solving Process
+
+### Files
+* 01.py
+* 02.py
+* DAY-14.png
+* DAY-14.md
+* LeetCode-001-Two-Sum.md
+* Two-Sum-Brute-Force.png
+* Two-Sum-Brute-Force.py
+* Two-Sum-Hashmap.png
+* Two-Sum-Hashmap.py
+
+✅ Completed
+</details>
 
 
 
