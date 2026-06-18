@@ -487,7 +487,7 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 
 </details>
-
+<details>
 <summary><b>✅ Day 12 — Modules, Packages, pip, Virtual Environments & Python Ecosystem</b></summary>
 
 ### Topics Covered
@@ -526,7 +526,7 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 </details>
 
-
+<details>
 <summary><b>✅ Day 13 — Software Development Thinking, CLI  Applications & CRUD Fundamentals</b></summary>
 
 ### Topics Covered
@@ -555,6 +555,8 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 </details>
 
+
+<details>
 <summary><b>✅ Day 14 — DSA Foundations, Arrays, HashMaps</b></summary>
 
 ### Topics Covered
@@ -586,7 +588,43 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ Day 15 —  Object-Oriented Programming (OOP), Classes & Objects</b></summary>
 
+### Topics Covered
+
+- ✅ Learned OOP
+- ✅ Learned Classes
+- ✅ Learned Objects
+- ✅ Learned Constructors
+- ✅ Learned self
+- ✅ Learned Instance Variables
+- ✅ Learned Class Variables
+- ✅ Learned Instance Methods
+- ✅ Learned Class Methods
+- ✅ Learned Static Methods
+- ✅ Learned __str__()
+- ✅ Learned Object Identity
+- ✅ Learned Encapsulation Basics
+- ✅ Built BankAccount Class
+- ✅ Created Multiple Objects
+
+### Files
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* DAY-15.png
+* DAY-15.md
+* LeetCode-217-Contains-Duplicate.md
+* LeetCode-217-Contains-Duplicate.png.png
+* LeetCode-217-Contains-Duplicate.py
+
+✅ Completed
+</details>
 
 
 
