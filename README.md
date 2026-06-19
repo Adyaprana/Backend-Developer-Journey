@@ -626,6 +626,48 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ Day 16 —  Inheritance, Code Reuse & Object Relationships</b></summary>
+
+### Topics Covered
+
+- ✅ Learned Inheritance
+- ✅ Learned Parent Classes
+- ✅ Learned Child Classes
+- ✅ Learned IS-A Relationships
+- ✅ Learned Constructors In Inheritance
+- ✅ Learned super()
+- ✅ Learned Method Overriding
+- ✅ Learned Polymorphism Preview
+- ✅ Learned Multiple Inheritance
+- ✅ Learned MRO
+- ✅ Learned isinstance()
+- ✅ Learned issubclass()
+- ✅ Learned Composition vs Inheritance
+- ✅ Built Animal Hierarchy
+- ✅ Built Employee Hierarchy
+- ✅ Solved Valid Anagram
+
+
+### Files
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* DAY-16.png
+* DAY-16.md
+* LeetCode-242-Valid-Anagram.md
+* LeetCode-242-Valid-Anagram.png.png
+* LeetCode-242-Valid-Anagram.py
+
+✅ Completed
+</details>
+
+
+
 
 
 
