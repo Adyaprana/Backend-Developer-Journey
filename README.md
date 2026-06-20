@@ -667,6 +667,57 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 </details>
 
 
+<details>
+<summary><b>✅ Day 17 — Encapsulation, Polymorphism & Python Data Model </b>
+</summary>
+
+### Topics Covered
+
+* Learned Encapsulation
+* Learned Public Variables
+* Learned Protected Variables
+* Learned Private Variables
+* Learned Name Mangling
+* Learned Getters
+* Learned Setters
+* Learned @property
+* Learned Property Setters
+* Learned Descriptor Basics
+* Learned Polymorphism
+* Learned Shape Polymorphism
+* Learned Dunder Methods
+* Learned **str**
+* Learned **repr**
+* Learned **len**
+* Learned **eq**
+* Practiced OOP Design Thinking
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* DAY-17.png
+* DAY-17.md
+
+✅ Completed
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
