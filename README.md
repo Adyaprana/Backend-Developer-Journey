@@ -707,6 +707,57 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<summary><b>✅ Day 18 — Decorators, Closures & Python's Hidden Superpower </b>
+</summary>
+
+### Topics Covered
+
+* Learned First-Class Functions
+* Learned Higher-Order Functions
+* Learned Function References
+* Learned Closures
+* Learned State Preservation
+* Learned Decorator Architecture
+* Learned Wrapper Functions
+* Learned @ Syntax
+* Learned Decorator Factories
+* Learned Nested Decorators
+* Learned functools.wraps()
+* Learned Function Metadata
+* Learned Class Decorators
+* Learned @staticmethod
+* Learned @classmethod
+* Learned @property
+* Learned FastAPI Route Decorators
+* Learned Django Decorators
+* Learned Logging Decorators
+* Learned Timing Decorators
+* Learned Authentication Decorators
+* Learned Caching Decorators
+* Learned Retry Decorators
+* Learned Rate Limiting Decorators
+* Learned Middleware vs Decorators
+* Learned Aspect-Oriented Programming
+* Prepared For Python Decorator Interviews
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* DAY-18.png
+* DAY-18.md
+* LeetCode-125-Valid-Palindrome.md
+* LeetCode-125-Valid-Palindrome.png
+* LeetCode-125-Valid-Palindrome.py
+
+✅ Completed
+
+</details>
+
 
 
 
