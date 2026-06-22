@@ -758,8 +758,36 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<summary><b>✅ DAY 19 — Iterators, Generators & Lazy Evaluation
+ </b>
+</summary>
 
+### Topics Covered
 
+* Generators + Iterators
+* Iterators: __iter__ and __next__
+* yield keyword — generators
+* Generator expressions
+* Why generators matter: memory efficiency for large data
+* Practice: Write a generator for Fibonacci sequence
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* DAY-19.png
+* DAY-19.md
+* LeetCode-20-Valid-Parentheses.md
+* LeetCode-20-Valid-Parentheses.png
+* LeetCode-20-Valid-Parentheses.py
+
+✅ Completed
+
+</details>
 
 
 
