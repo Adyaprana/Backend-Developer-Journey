@@ -707,6 +707,7 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<details>
 <summary><b>✅ Day 18 — Decorators, Closures & Python's Hidden Superpower </b>
 </summary>
 
@@ -758,6 +759,7 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<details>
 <summary><b>✅ DAY 19 — Iterators, Generators & Lazy Evaluation
  </b>
 </summary>
@@ -789,6 +791,33 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<details>
+<summary><b>✅ DAY 20 — OOP Revision + Practice
+ </b>
+</summary>
+
+### Topics Covered
+
+Revise all OOP concepts from Days 15–19
+Without looking at notes: explain class, object, inheritance, polymorphism, encapsulation
+Solve 10 OOP problems from GeeksForGeeks Python OOP section
+Read: top 20 Python OOP interview questions on InterviewBit
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* DAY-20.png
+* DAY-20.md
+* LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.md
+* LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.png
+* LeetCode-121-Best-Time-to-Buy-and-Sell-Stock.py
+✅ Completed
+
+</details>
 
 
 
