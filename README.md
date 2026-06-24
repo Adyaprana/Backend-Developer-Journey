@@ -798,10 +798,10 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 ### Topics Covered
 
-Revise all OOP concepts from Days 15–19
-Without looking at notes: explain class, object, inheritance, polymorphism, encapsulation
-Solve 10 OOP problems from GeeksForGeeks Python OOP section
-Read: top 20 Python OOP interview questions on InterviewBit
+* Revise all OOP concepts from Days 15–19
+* Without looking at notes: explain class, object, inheritance, polymorphism, encapsulation
+* Solve 10 OOP problems from GeeksForGeeks Python OOP section
+* Read: top 20 Python OOP interview questions on InterviewBit
 
 ### Files
 
@@ -820,6 +820,36 @@ Read: top 20 Python OOP interview questions on InterviewBit
 </details>
 
 
+<details>
+<summary><b>✅ DAY 21 — REVISION HANDBOOK
+ </b>
+</summary>
+
+### Topics Covered
+
+* TOP 50 PYTHON INTERVIEW QUESTIONS
+* TOP 50 OOP INTERVIEW QUESTIONS
+* TOP 25 DSA / LEETCODE INTERVIEW QUESTIONS
+* TOP 25 BACKEND-ORIENTED PYTHON INTERVIEW QUESTIONS
+* WEEK 1 – PYTHON FUNDAMENTALS REVISION
+* WEEK 2 – INTERMEDIATE PYTHON REVISION
+* WEEK 3 – OOP MASTER REVISION
+
+
+### Files
+
+* DAY-21.md
+* DAY-21.png 
+* LeetCode-14-Longest-Common-Prefix.md
+* LeetCode-14-Longest-Common-Prefix.png
+* LeetCode-14-Longest-Common-Prefix.py
+✅ Completed
+
+</details>
+
+
+
+
 
 
 
@@ -834,7 +864,7 @@ Read: top 20 Python OOP interview questions on InterviewBit
 
 
 <details>
-<summary><b>⬜ Day xxx /b></summary>
+<summary><b>⬜ Day 420 /b></summary>
 
 Planned
 
