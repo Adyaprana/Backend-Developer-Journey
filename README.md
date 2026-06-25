@@ -847,7 +847,35 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<summary><b>✅ DAY 22 — HOW THE WEB WORKS 
+ </b>
+</summary>
 
+### Topics Covered
+
+* Client-server architecture
+* HTTP request cycle: client sends request → server processes → sends response
+* HTTP methods: GET, POST, PUT, PATCH, DELETE — when to use each
+* HTTP status codes: 200, 201, 400, 401, 403, 404, 422, 500 — memorize these
+* Headers, body, query params, path params — what are they
+
+
+### Files
+
+* DAY-22.md
+* DAY-22.png 
+* How-the-Web-Works.txt
+* INTERVIEW-QUESTIONS.py
+* LeetCode-58-Length-of-Last-Word.md
+* LeetCode-58-Length-of-Last-Word.png
+* LeetCode-58-Length-of-Last-Word.py
+* post-request.py
+* query-params.py
+* Requests.py
+
+✅ Completed
+
+</details>
 
 
 
