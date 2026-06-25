@@ -1,0 +1,310 @@
+THEORY 1 — WHAT IS THE WEB?
+
+Imagine Instagram.
+You open: instagram.com
+
+Your browser does NOT magically know your posts.
+It asks a server.
+
+The server replies.
+This communication happens using: HTTP (HyperText Transfer Protocol)
+HTTP is the language of the web. 
+
+
+--------------------------------------------------------------
+
+
+THEORY 2 — CLIENT SERVER ARCHITECTURE
+
+Client
+Client requests data.
+Examples:
+Chrome
+Firefox
+Mobile App
+React Frontend
+Example: Show my profile
+
+
+Server
+Server processes request.
+Example:
+Okay.
+Checking database...
+Sending profile...
+
+Visual:
+CLIENT
+(Browser)
+
+    |
+    | HTTP Request
+    v
+SERVER
+(FastAPI)
+
+    |
+    | Database Query
+    v
+DATABASE
+
+    |
+    | Data
+    v
+SERVER
+
+    |
+    | HTTP Response
+    v
+CLIENT
+
+
+---------------------------------------------------
+
+
+THEORY 3 — HTTP REQUEST CYCLE
+Every website follows this.
+
+Step 1
+User opens: https://instagram.com/profile
+
+Step 2
+Browser sends request.
+GET /profile
+
+Step 3
+Server receives request.
+
+Step 4
+Server processes request.
+Maybe:
+Check login
+Check database
+Get user data
+
+Step 5
+Server sends response.
+{
+    "name":"Adyaprana",
+    "followers":500
+}
+
+Step 6
+Browser displays page.
+
+
+-------------------------------------------------------
+
+
+THEORY 4 — HTTP METHODS
+
+GET --> Used to READ data.
+Example: GET /users
+Meaning: Give me users
+Real Example
+GET /products
+Response:
+[
+    {"id":1,"name":"Laptop"},
+    {"id":2,"name":"Phone"}
+]
+
+
+POST --> Used to CREATE data.
+Example: POST /users
+Body:
+{
+  "name":"Adyaprana"
+}
+Meaning: Create a new user
+
+
+PUT --> Used to REPLACE entire resource.
+Example:
+Before:
+{
+  "name":"Adyaprana",
+  "city":"Bangalore"
+}
+PUT:
+{
+  "name":"Adya",
+  "city":"Mumbai"
+}
+Entire object replaced.
+
+PATCH --> Used to update PART of data.
+Before:
+{
+  "name":"Adyaprana",
+  "city":"Bangalore"
+}
+PATCH:
+{
+  "city":"Mumbai"
+}
+Only city changes.
+
+DELETE --> Used to remove data.
+Example: DELETE /users/1
+Meaning:
+Delete user 1
+
+
+EASIEST WAY TO MEMORIZE
+| Method | Meaning |
+| ------ | ------- |
+| GET    | Read    |
+| POST   | Create  |
+| PUT    | Replace |
+| PATCH  | Update  |
+| DELETE | Delete  |
+
+
+----------------------------------------------------------
+
+
+THEORY 5 — HTTP STATUS CODES
+
+200 OK --> Success.
+Example:
+GET /users (Success)
+Response: 200 OK
+
+201 Created --> Something created successfully.
+Example: POST /users 
+Response: 201 Created
+
+400 Bad Request --> Client sent invalid request.
+Example:
+{
+ "age":"abc"
+}
+Server expected number.
+
+401 Unauthorized --> Not logged in.
+Example: Token Missing
+
+403 Forbidden --> Logged in but not allowed.
+Example: Normal user trying to access admin panel
+
+404 Not Found --> Resource doesn't exist.
+Example: GET /user/9999
+User not found.
+
+422 Unprocessable Entity --> Very common in FastAPI.
+Example:
+{
+ "age":"hello"
+}
+Expected integer but Received string.
+
+500 Internal Server Error --> Server crashed.
+Example: 1 / 0
+Backend bug.
+
+STATUS CODE CHEAT SHEET
+200 Success
+201 Created
+400 Bad Request
+401 Unauthorized
+403 Forbidden
+404 Not Found
+422 Validation Error
+500 Server Error
+
+
+--------------------------------------------------------------
+
+
+THEORY 6 — HEADERS
+
+Headers = Extra Information
+Example: GET /users
+
+Headers: 
+Authorization: Bearer xyz
+Content-Type: application/json
+
+Think:
+Envelope outside letter
+Common Headers
+Content-Type
+Authorization
+Accept
+User-Agent
+
+
+---------------------------------------------------------
+
+
+THEORY 7 — REQUEST BODY
+
+Body contains actual data.
+Example: POST /users
+Body:
+{
+    "name":"Adyaprana",
+    "age":23
+}
+Think:
+Headers = Information about package
+Body = Actual package
+
+
+---------------------------------------------------------------
+
+
+THEORY 8 — QUERY PARAMETERS
+
+Used for filtering.
+Example: GET /products?category=laptop
+
+Query Param:
+category=laptop
+
+Multiple:
+GET /products?page=1&limit=10
+Very common in APIs.
+
+
+---------------------------------------------------------------
+
+
+THEORY 9 — PATH PARAMETERS
+
+Part of URL.
+Example: GET /users/10
+Path Parameter: 10
+
+FastAPI Example
+from fastapi import FastAPI
+app = FastAPI()
+
+@app.get("/users/{user_id}")
+def get_user(user_id: int):
+    return {"user_id": user_id}
+
+If URL: /users/25
+Output:
+{
+  "user_id":25
+}
+
+
+---------------------------------------------------------
+
+
+REAL BACKEND EXAMPLE
+
+Instagram: GET /posts
+Read posts.
+
+Amazon: POST /orders
+Create order.
+
+LinkedIn: PATCH /profile
+Update profile.
+
+YouTube: DELETE /comment/123
+Delete comment.
