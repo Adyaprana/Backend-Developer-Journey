@@ -877,7 +877,36 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<summary><b>✅ DAY 23 — REST API CONCEPTS
+ </b>
+</summary>
 
+### Topics Covered
+
+* What is an API? What is REST?
+* 6 REST constraints (stateless, client-server, uniform interface etc.)
+* JSON structure — objects, arrays, nesting
+* Use Postman or Thunder Client (VS Code) to call a real public API
+* Call JSONPlaceholder API — GET posts, GET user, POST new todo
+
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* DAY-23.md
+* DAY-23.png 
+* LeetCode-26-Remove-Duplicates-from-Sorted-Array.md
+* LeetCode-26-Remove-Duplicates-from-Sorted-Array.png
+* LeetCode-26-Remove-Duplicates-from-Sorted-Array.py
+
+✅ Completed
+
+</details>
 
 
 
