@@ -846,7 +846,7 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 
 </details>
-
+<details>
 <summary><b>✅ DAY 22 — HOW THE WEB WORKS 
  </b>
 </summary>
@@ -876,7 +876,7 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 
 </details>
-
+<details>
 <summary><b>✅ DAY 23 — REST API CONCEPTS
  </b>
 </summary>
@@ -908,6 +908,32 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<details>
+<summary><b>✅ DAY 24 — GIT & GITHUB
+ </b>
+</summary>
+
+### Topics Covered
+
+* git init, git add, git commit -m, git status, git log
+* git push, git pull, git clone
+* Branching: git branch, git checkout, git merge
+* Create a new repo on GitHub, push your Contact Book project
+
+### Files
+
+* 01.py
+* 02.py
+* DAY-24.md
+* DAY-24.png
+* git_commands_cheatsheet.txt 
+* LeetCode-28-Find-the-Index-of-the-First-Occurrence-in-a-String.md
+* LeetCode-28-Find-the-Index-of-the-First-Occurrence-in-a-String.png
+* LeetCode-28-Find-the-Index-of-the-First-Occurrence-in-a-String.py
+
+✅ Completed
+
+</details>
 
 
 
