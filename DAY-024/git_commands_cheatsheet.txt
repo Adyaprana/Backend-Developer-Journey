@@ -1,0 +1,62 @@
+# CHECK VERSION
+git --version
+
+# CONFIG
+git config --global user.name "Your Name"
+git config --global user.email "you@email.com"
+
+# INITIALIZE
+git init
+
+# STATUS
+git status
+
+# ADD FILES
+git add .
+git add filename.py
+
+# COMMIT
+git commit -m "message"
+
+# VIEW HISTORY
+git log
+git log --oneline
+
+# CONNECT GITHUB
+git remote add origin URL
+
+# PUSH
+git push -u origin main
+git push
+
+# PULL
+git pull origin main
+
+# CLONE
+git clone URL
+
+# BRANCHES
+git branch
+git checkout -b new-branch
+git checkout main
+
+# MERGE
+git merge branch-name
+
+# DIFF
+git diff
+
+# STASH
+git stash
+git stash pop
+
+# RESET
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+
+# REMOTE
+git remote -v
+
+# TAGS
+git tag v1.0
+git push origin v1.0
