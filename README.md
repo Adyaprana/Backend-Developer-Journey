@@ -935,6 +935,39 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 
 </details>
 
+<details>
+<summary><b>✅ DAY 25 — ASYNC/AWAIT IN PYTHON
+ </b>
+</summary>
+
+### Topics Covered
+
+* Async/Await in Python
+* Synchronous vs asynchronous code — core concept
+* asyncio module, async def, await keyword
+* Why FastAPI is async — understand this deeply
+* I/O bound vs CPU bound — when to use async
+* Write 3 async programs: simulated API calls with asyncio.sleep
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* 07.py
+* DAY-25.md
+* DAY-25.png
+* LeetCode-2108-Find-First-Palindromic-String-in-the-Array.md
+* LeetCode-2108-Find-First-Palindromic-String-in-the-Array.png
+* LeetCode-2108-Find-First-Palindromic-String-in-the-Array.py
+
+✅ Completed
+</details>
+
+
 
 
 
