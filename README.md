@@ -967,7 +967,35 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 26 — PYTHON REQUESTS LIBRARY: CALLING APIs FROM PYTHON
+ </b>
+</summary>
 
+### Topics Covered
+
+* Python Requests Library — Calling APIs from Python
+* pip install requests
+* requests.get(), requests.post() with JSON body
+* Handle response: .json(), .status_code, .headers
+* Build: Python script that fetches GitHub profile data using GitHub API
+* Build: Weather fetcher using OpenWeatherMap free API
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* DAY-26.md
+* DAY-26.png
+* LeetCode-387-First-Unique-Character-in-a-String.md
+* LeetCode-387-First-Unique-Character-in-a-String.png
+* LeetCode-387-First-Unique-Character-in-a-String.py
+
+✅ Completed
+</details>
 
 
 
