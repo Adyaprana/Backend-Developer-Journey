@@ -997,6 +997,36 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 27 — PYTHON INTERNALS, DATA STRUCTURES & INTERVIEW MASTERY
+
+ </b>
+</summary>
+
+### Topics Covered
+
+* mutable vs immutable, GIL, list vs tuple vs set vs dict
+* Deep copy vs shallow copy
+* *args and **kwargs with examples
+* Practice: explain every OOP concept aloud without reading notes
+* Read top 50 Python interview questions on InterviewBit — just read, don't memorize
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* 04.py
+* 05.py
+* 06.py
+* DAY-27.md
+* DAY-27.png
+* LeetCode-349-Intersection-of-Two-Arrays.md
+* LeetCode-349-Intersection-of-Two-Arrays.png
+* LeetCode-349-Intersection-of-Two-Arrays.py
+
+✅ Completed
+</details>
 
 
 
