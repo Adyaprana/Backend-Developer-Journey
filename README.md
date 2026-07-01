@@ -1028,6 +1028,34 @@ Instead of learning everything, I am focusing on mastering one domain properly:
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 28 — Rest Day + DSA 
+ </b>
+</summary>
+
+### Topics Covered
+
+LeetCode Problems Solved
+- #136 Single Number
+- #169 Majority Element
+
+### Files
+
+* DAY-28.md
+* DAY-28.png
+* LeetCode-136-Single-Number.md
+* LeetCode-136-Single-Number.png
+* LeetCode-136-Single-Number.py
+* LeetCode-169-Majority-Element.md
+* LeetCode-169-Majority-Element.png
+* LeetCode-169-Majority-Element.py
+✅ Completed
+</details>
+
+
+
+
+
 
 
 
