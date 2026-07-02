@@ -1052,7 +1052,36 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 29 — SQL BASICS: PostgreSQL, CRUD Operations & Interview Prep
 
+ </b>
+</summary>
+
+### Topics Covered
+
+* Install PostgreSQL + pgAdmin (free GUI tool)
+* CREATE TABLE, DROP TABLE, ALTER TABLE
+* Data types: VARCHAR, INTEGER, BOOLEAN, TIMESTAMP, TEXT
+* INSERT INTO, SELECT * FROM, WHERE clause
+* UPDATE, DELETE with WHERE
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* connect-sql.py
+* DAY-29.md
+* DAY-29.png
+* LeetCode-268-Missing-Number.md
+* LeetCode-268-Missing-Number.png
+* LeetCode-268-Missing-Number.py
+* Products.sql
+* Students.sql
+
+✅ Completed
+</details>
 
 
 
