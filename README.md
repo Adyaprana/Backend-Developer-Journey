@@ -1084,6 +1084,39 @@ LeetCode Problems Solved
 </details>
 
 
+<details>
+<summary><b>✅ DAY 30 — SQL JOINs: LeetCode Problems For JOIN
+
+ </b>
+</summary>
+
+### Topics Covered
+
+* Install PostgreSQL + pgAdmin (free GUI tool)
+* CREATE TABLE, DROP TABLE, ALTER TABLE
+* Data types: VARCHAR, INTEGER, BOOLEAN, TIMESTAMP, TEXT
+* INSERT INTO, SELECT * FROM, WHERE clause
+* UPDATE, DELETE with WHERE
+
+### Files
+
+
+* 0175-Combine-Two-Tables
+* 0181-Employees-Earning-More-Than-Their-Managers
+* 0577-Employee-Bonus
+* 0584-Find-Customer-Referee
+* 0595-Big-Countries
+* 01.py
+* 02.py
+* 03.py
+* DAY-30.md
+* DAY-30.png
+* joins.sql
+* Practice.sql
+
+
+✅ Completed
+</details>
 
 
 
@@ -1093,13 +1126,29 @@ LeetCode Problems Solved
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<summary><b>...</summary>
 
 <details>
-<summary><b>⬜ Day 420 /b></summary>
+<summary><b>⬜ Day 420 </summary>
 
 Planned
 
 </details>
+
 ---
 
 # 🏗️ Planned Projects
