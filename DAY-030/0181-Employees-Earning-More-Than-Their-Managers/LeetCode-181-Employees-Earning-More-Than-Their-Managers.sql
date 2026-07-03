@@ -27,13 +27,14 @@
 -- | 3  | Sam   | 60000  | Null      |
 -- | 4  | Max   | 90000  | Null      |
 -- +----+-------+--------+-----------+
--- Output: 
+-- Output:
 -- +----------+
 -- | Employee |
 -- +----------+
 -- | Joe      |
 -- +----------+
 -- Explanation: Joe is the only employee who earns more than his manager.
+
 
 
 -- Create Table
