@@ -1114,12 +1114,38 @@ LeetCode Problems Solved
 * joins.sql
 * Practice.sql
 
-
 ✅ Completed
 </details>
 
 
+<details>
+<summary><b>✅ DAY 31 — SQL AGGREGATIONS + SUBQUERIES: THE COMPLETE HANDBOOK
 
+ </b>
+</summary>
+
+### Topics Covered
+
+* GROUP BY, HAVING, ORDER BY, LIMIT, OFFSET
+* COUNT(), SUM(), AVG(), MAX(), MIN()
+* Subqueries — queries inside queries
+* Practice: Find top 5 customers by total orders, monthly revenue report
+### Files
+
+* 0570-Managers-with-at-Least-5-Direct-Reports
+* 0586-Customer-Placing-the-Largest-Number-of-Orders
+* 0596-Classes-With-at-Least-5-Students
+* 0584-1070-Product-Sales-Analysis-III
+* 01.py
+* 02.py
+* Aggregations.sql
+* DAY-31.md
+* DAY-31.png
+* Practice.sql
+
+
+✅ Completed
+</details>
 
 
 
