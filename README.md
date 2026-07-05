@@ -1147,6 +1147,34 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 32 — DATABASE DESIGN: SCHEMAS, KEYS, RELATIONS & INDEXES
+
+ </b>
+</summary>
+
+### Topics Covered
+
+* Primary key, foreign key, unique constraint, NOT NULL
+* One-to-many, many-to-many relationships
+* Indexes: what they are, when to add them, why they speed up queries
+* Design: e-commerce DB schema (users, products, orders, order_items)
+* Draw this on paper — interviewers ask you to design schemas
+### Files
+
+* 01.py
+* 02.py
+* DAY-32.md
+* DAY-32.png
+* Practice.sql
+* LeetCode-511-Game-Play-Analysis-I.md
+* LeetCode-511-Game-Play-Analysis-I.png
+* LeetCode-511-Game-Play-Analysis-I.sql
+* Project.py
+* Project.sql
+
+✅ Completed
+</details>
 
 
 
@@ -1164,9 +1192,9 @@ LeetCode Problems Solved
 
 
 
-
-
+<details>
 <summary><b>...</summary>
+</details>
 
 <details>
 <summary><b>⬜ Day 420 </summary>
