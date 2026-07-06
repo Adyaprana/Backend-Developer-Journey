@@ -1176,6 +1176,30 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 33 — TRANSACTIONS, ACID PROPERTIES & THE N+1 PROBLEM </b>
+</summary>
+
+### Topics Covered
+
+* BEGIN, COMMIT, ROLLBACK
+* ACID: Atomicity, Consistency, Isolation, Durability — define each
+* Why transactions matter in banking/payments (interview context)
+* N+1 problem — what it is, why it kills performance, how to fix it
+
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* DAY-33.md
+* DAY-33.png
+* LeetCode-1045-Customers-Who-Bought-All-Products.md
+* LeetCode-1045-Customers-Who-Bought-All-Products.png
+* LeetCode-1045-Customers-Who-Bought-All-Products.py
+
+✅ Completed
+</details>
 
 
 
