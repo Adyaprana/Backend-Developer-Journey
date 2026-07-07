@@ -1201,8 +1201,33 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 34 — SQLAlchemy ORM: PYTHON + POSTGRESQL </b>
+</summary>
 
+### Topics Covered
 
+* pip install sqlalchemy psycopg2-binary
+* Define models as Python classes (not raw SQL)
+* Create tables, insert records, query, update, delete using SQLAlchemy
+* Relationships in SQLAlchemy: ForeignKey, relationship()
+* This is exactly how FastAPI connects to databases
+### Files
+
+* 01.py
+* 02.py
+* 03.py
+* DAY-34.md
+* DAY-34.png
+* full-SQLAlchemy.py
+* LeetCode-610-Triangle-Judgement.md
+* LeetCode-610-Triangle-Judgement.png
+* LeetCode-610-Triangle-Judgement.py
+* LeetCode-1527-Patients-With-a-Condition.md
+* LeetCode-1527-Patients-With-a-Condition.png
+* LeetCode-1527-Patients-With-a-Condition.py
+✅ Completed
+</details>
 
 
 
