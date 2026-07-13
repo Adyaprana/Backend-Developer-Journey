@@ -1229,7 +1229,25 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 35 — REST + SQL PRACTICE + PROJECT PLANNING </b>
+</summary>
 
+### Topics Covered
+
+* Planning The Project: GuessWise
+* Finalize Project Architecture And Data Design 
+
+### Files
+
+* akinator.md
+* DAY-35.md
+* DAY-35.png
+* LeetCode-619-Biggest-Single-Number.md
+* LeetCode-619-Biggest-Single-Number.png
+* LeetCode-619-Biggest-Single-Number.py
+✅ Completed
+</details>
 
 
 
