@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "name": "Virat Kohli",
+        "category": "character",
+        "attributes": {
+            "real": true,
+            "alive": true,
+            "male": true,
+            "indian": true,
+            "cricketer": true
+        }
+    }
+]
