@@ -1246,8 +1246,42 @@ LeetCode Problems Solved
 * LeetCode-619-Biggest-Single-Number.md
 * LeetCode-619-Biggest-Single-Number.png
 * LeetCode-619-Biggest-Single-Number.py
+
 ✅ Completed
 </details>
+
+<details>
+<summary><b>✅ DAY 36 — GuessWise: Project Initialization +  Architecture Design  </b>
+</summary>
+
+### Topics Covered
+
+* Project Initialization + Design (No code written yet)
+* Project initialized
+* Folder structure created in VS Code
+* Virtual environment (.venv) created and activated
+* Documentation started (GuessWise.md)
+* High-level architecture designed
+* Repository pattern decided
+* Data flow designed
+* Character model concept designed
+* Question model concept designed
+* JSON design discussed and finalized
+* PostgreSQL migration strategy planned 
+
+### Files
+
+* 01.py
+* DAY-36.md
+* Phase-1-Project-Initialization.py
+* Phase-2-Design-the-Project.py
+* **Path:** `Backend-Developer-Journey\Project\GuessWise - Akinator-inspired CLI Guessing Game`
+
+✅ Completed
+</details>
+
+
+
 
 
 
