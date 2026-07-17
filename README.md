@@ -1280,6 +1280,34 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 37 — GuessWise: Models, Repository Pattern + LeetCode Prefix Sum  </b>
+</summary>
+
+### Topics Covered
+
+* Character model using @dataclass
+* Question model using @dataclass
+* Repository Interface (Abstract Base Class)
+* JsonRepository implementation
+* characters.json + questions.json populated
+* JSON → Python Objects working
+* Tested from main.py
+* LeetCode 724 solved (Brute Force + Prefix Sum)
+
+### Files
+
+* all-day-code.md
+* DAY-37.md
+* LeetCode-724-Find-Pivot-Index.md
+* LeetCode-724-Find-Pivot-Index.png
+* LeetCode-724-Find-Pivot-Index.py
+* Phase-3.py
+* Phase-4.py
+* **Path:** `Backend-Developer-Journey\Project\GuessWise - Akinator-inspired CLI Guessing Game`
+
+✅ Completed
+</details>
 
 
 
