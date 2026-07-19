@@ -1,14 +1,4 @@
-from repository.json_repository import JsonRepository
+from game import Game
 
-repository = JsonRepository()
-
-characters = repository.get_characters()
-questions = repository.get_questions()
-
-print("Characters:")
-for character in characters:
-    print(character)
-
-print("\nQuestions:")
-for question in questions:
-    print(question)
+game = Game()
+game.start()
