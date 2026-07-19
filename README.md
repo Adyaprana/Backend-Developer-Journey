@@ -1309,6 +1309,33 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 38 — GuessWise: Game Class, Menu System + LeetCode Linear Traversal  </b>
+</summary>
+
+### Topics Covered
+
+* Game class — controls overall application flow
+* Game flow: start() → load data → show_menu()
+* Main menu with Character/Animal/Object/Exit options
+* Character mode with question display
+* User answer collection (Yes/No/Probably/Probably Not/Don't Know)
+* Input validation with retry loop
+* Dictionary-based answer mapping (no messy if/elif chains)
+* PostgreSQL 18 confirmed installed (preparation for Day 40)
+* LeetCode 485 solved (Brute Force + Linear Traversal)
+
+### Files
+
+* DAY-38.md
+* LeetCode-485-Max-Consecutive-Ones.md
+* LeetCode-485-Max-Consecutive-Ones.png
+* LeetCode-485-Max-Consecutive-Ones.py
+* Phase-5.md
+* **Path:** `Backend-Developer-Journey\Project\GuessWise - Akinator-inspired CLI Guessing Game`
+
+✅ Completed
+</details>
 
 
 
