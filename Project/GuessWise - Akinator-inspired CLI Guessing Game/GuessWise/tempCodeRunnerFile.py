@@ -1,2 +1,0 @@
-
-                self.character_mode()
