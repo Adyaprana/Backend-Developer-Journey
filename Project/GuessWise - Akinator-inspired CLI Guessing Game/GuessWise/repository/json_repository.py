@@ -19,10 +19,20 @@ class JsonRepository(Repository):
     def get_questions(self) -> list[Question]:
         with open("data/questions.json", "r") as file:
             data = json.load(file)
+
             questions = []
-            for item in data:
-                question = Question(**item)
-                questions.append(question)
+            for group in data:
+                category = group["category"]
+
+                for item in group["questions"]:
+                    questions.append(
+                        Question(
+                            id=item["id"],
+                            category=category,
+                            text=item["text"],
+                            attribute=item["attribute"]
+                        )
+                    )
             return questions
 
 

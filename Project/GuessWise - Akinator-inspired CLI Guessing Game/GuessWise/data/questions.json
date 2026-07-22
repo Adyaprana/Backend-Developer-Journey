@@ -1,7 +1,767 @@
 [
-    {
+  {
+    "category": "character",
+    "questions": [
+      {
         "id": 1,
-        "text": "Is your character real?",
+        "text": "Is your character a real person?",
         "attribute": "real"
-    }
+      },
+      {
+        "id": 2,
+        "text": "Is your character male?",
+        "attribute": "male"
+      },
+      {
+        "id": 3,
+        "text": "Is your character still alive?",
+        "attribute": "alive"
+      },
+      {
+        "id": 4,
+        "text": "Is your character Indian?",
+        "attribute": "indian"
+      },
+      {
+        "id": 5,
+        "text": "Is your character a cricketer?",
+        "attribute": "cricketer"
+      },
+      {
+        "id": 6,
+        "text": "Is your character an actor?",
+        "attribute": "actor"
+      },
+      {
+        "id": 7,
+        "text": "Is your character a musician?",
+        "attribute": "musician"
+      },
+      {
+        "id": 8,
+        "text": "Is your character fictional?",
+        "attribute": "fictional"
+      },
+      {
+        "id": 9,
+        "text": "Is your character a politician?",
+        "attribute": "politician"
+      },
+      {
+        "id": 10,
+        "text": "Is your character a scientist?",
+        "attribute": "scientist"
+      },
+      {
+        "id": 11,
+        "text": "Is your character a writer?",
+        "attribute": "writer"
+      },
+      {
+        "id": 12,
+        "text": "Is your character a singer?",
+        "attribute": "singer"
+      },
+      {
+        "id": 13,
+        "text": "Is your character a sportsperson?",
+        "attribute": "sportsperson"
+      },
+      {
+        "id": 14,
+        "text": "Is your character a footballer?",
+        "attribute": "footballer"
+      },
+      {
+        "id": 15,
+        "text": "Is your character a tennis player?",
+        "attribute": "tennis_player"
+      },
+      {
+        "id": 16,
+        "text": "Has your character won international awards?",
+        "attribute": "award_winner"
+      },
+      {
+        "id": 17,
+        "text": "Is your character from Asia?",
+        "attribute": "asian"
+      },
+      {
+        "id": 18,
+        "text": "Is your character from Europe?",
+        "attribute": "european"
+      },
+      {
+        "id": 19,
+        "text": "Is your character from America?",
+        "attribute": "american"
+      },
+      {
+        "id": 20,
+        "text": "Is your character over 50 years old?",
+        "attribute": "over_50"
+      },
+      {
+        "id": 21,
+        "text": "Is your character known for movies?",
+        "attribute": "movies"
+      },
+      {
+        "id": 22,
+        "text": "Is your character famous on television?",
+        "attribute": "television"
+      },
+      {
+        "id": 23,
+        "text": "Does your character wear glasses?",
+        "attribute": "glasses"
+      },
+      {
+        "id": 24,
+        "text": "Does your character have a beard?",
+        "attribute": "beard"
+      },
+      {
+        "id": 25,
+        "text": "Is your character bald?",
+        "attribute": "bald"
+      },
+      {
+        "id": 26,
+        "text": "Does your character have black hair?",
+        "attribute": "black_hair"
+      },
+      {
+        "id": 27,
+        "text": "Is your character married?",
+        "attribute": "married"
+      },
+      {
+        "id": 28,
+        "text": "Does your character have children?",
+        "attribute": "has_children"
+      },
+      {
+        "id": 29,
+        "text": "Is your character from India?",
+        "attribute": "indian"
+      },
+      {
+        "id": 30,
+        "text": "Is your character from the United States?",
+        "attribute": "usa"
+      },
+      {
+        "id": 31,
+        "text": "Is your character from the United Kingdom?",
+        "attribute": "uk"
+      },
+      {
+        "id": 32,
+        "text": "Has your character appeared in comic books?",
+        "attribute": "comic_character"
+      },
+      {
+        "id": 33,
+        "text": "Can your character use magic?",
+        "attribute": "magic"
+      },
+      {
+        "id": 34,
+        "text": "Does your character have superpowers?",
+        "attribute": "superpowers"
+      },
+      {
+        "id": 35,
+        "text": "Is your character animated?",
+        "attribute": "animated"
+      },
+      {
+        "id": 36,
+        "text": "Is your character from anime?",
+        "attribute": "anime"
+      },
+      {
+        "id": 37,
+        "text": "Is your character from a video game?",
+        "attribute": "video_game"
+      },
+      {
+        "id": 38,
+        "text": "Is your character a king or queen?",
+        "attribute": "royalty"
+      },
+      {
+        "id": 39,
+        "text": "Is your character a historical figure?",
+        "attribute": "historical"
+      },
+      {
+        "id": 40,
+        "text": "Is your character a freedom fighter?",
+        "attribute": "freedom_fighter"
+      },
+      {
+        "id": 41,
+        "text": "Is your character a YouTuber?",
+        "attribute": "youtuber"
+      },
+      {
+        "id": 42,
+        "text": "Is your character a social media influencer?",
+        "attribute": "influencer"
+      },
+      {
+        "id": 43,
+        "text": "Is your character a billionaire?",
+        "attribute": "billionaire"
+      },
+      {
+        "id": 44,
+        "text": "Is your character a CEO?",
+        "attribute": "ceo"
+      },
+      {
+        "id": 45,
+        "text": "Is your character an entrepreneur?",
+        "attribute": "entrepreneur"
+      },
+      {
+        "id": 46,
+        "text": "Is your character a teacher?",
+        "attribute": "teacher"
+      },
+      {
+        "id": 47,
+        "text": "Is your character a doctor?",
+        "attribute": "doctor"
+      },
+      {
+        "id": 48,
+        "text": "Is your character an engineer?",
+        "attribute": "engineer"
+      },
+      {
+        "id": 49,
+        "text": "Is your character a criminal?",
+        "attribute": "criminal"
+      },
+      {
+        "id": 50,
+        "text": "Is your character famous worldwide?",
+        "attribute": "world_famous"
+      }
+    ]
+  },
+  {
+    "category": "animal",
+    "questions": [
+      {
+        "id": 1,
+        "text": "Is it a mammal?",
+        "attribute": "mammal"
+      },
+      {
+        "id": 2,
+        "text": "Is it a wild animal?",
+        "attribute": "wild"
+      },
+      {
+        "id": 3,
+        "text": "Is it a pet?",
+        "attribute": "pet"
+      },
+      {
+        "id": 4,
+        "text": "Can it fly?",
+        "attribute": "can_fly"
+      },
+      {
+        "id": 5,
+        "text": "Can it swim?",
+        "attribute": "can_swim"
+      },
+      {
+        "id": 6,
+        "text": "Does it live in water?",
+        "attribute": "aquatic"
+      },
+      {
+        "id": 7,
+        "text": "Is it a carnivore?",
+        "attribute": "carnivore"
+      },
+      {
+        "id": 8,
+        "text": "Is it a herbivore?",
+        "attribute": "herbivore"
+      },
+      {
+        "id": 9,
+        "text": "Is it an omnivore?",
+        "attribute": "omnivore"
+      },
+      {
+        "id": 10,
+        "text": "Does it have four legs?",
+        "attribute": "four_legs"
+      },
+      {
+        "id": 11,
+        "text": "Does it have wings?",
+        "attribute": "wings"
+      },
+      {
+        "id": 12,
+        "text": "Does it have fur?",
+        "attribute": "fur"
+      },
+      {
+        "id": 13,
+        "text": "Does it have feathers?",
+        "attribute": "feathers"
+      },
+      {
+        "id": 14,
+        "text": "Does it lay eggs?",
+        "attribute": "lays_eggs"
+      },
+      {
+        "id": 15,
+        "text": "Is it venomous?",
+        "attribute": "venomous"
+      },
+      {
+        "id": 16,
+        "text": "Is it dangerous to humans?",
+        "attribute": "dangerous"
+      },
+      {
+        "id": 17,
+        "text": "Is it found in Africa?",
+        "attribute": "africa"
+      },
+      {
+        "id": 18,
+        "text": "Is it found in Asia?",
+        "attribute": "asia"
+      },
+      {
+        "id": 19,
+        "text": "Is it found in forests?",
+        "attribute": "forest"
+      },
+      {
+        "id": 20,
+        "text": "Is it found in deserts?",
+        "attribute": "desert"
+      },
+      {
+        "id": 21,
+        "text": "Is it found in the Arctic?",
+        "attribute": "arctic"
+      },
+      {
+        "id": 22,
+        "text": "Is it nocturnal?",
+        "attribute": "nocturnal"
+      },
+      {
+        "id": 23,
+        "text": "Can it climb trees?",
+        "attribute": "climbs_trees"
+      },
+      {
+        "id": 24,
+        "text": "Can it run fast?",
+        "attribute": "fast_runner"
+      },
+      {
+        "id": 25,
+        "text": "Is it endangered?",
+        "attribute": "endangered"
+      },
+      {
+        "id": 26,
+        "text": "Is it domesticated?",
+        "attribute": "domesticated"
+      },
+      {
+        "id": 27,
+        "text": "Does it have horns?",
+        "attribute": "horns"
+      },
+      {
+        "id": 28,
+        "text": "Does it have stripes?",
+        "attribute": "stripes"
+      },
+      {
+        "id": 29,
+        "text": "Does it have spots?",
+        "attribute": "spots"
+      },
+      {
+        "id": 30,
+        "text": "Is it larger than a human?",
+        "attribute": "large"
+      },
+      {
+        "id": 31,
+        "text": "Is it smaller than a cat?",
+        "attribute": "small"
+      },
+      {
+        "id": 32,
+        "text": "Is it a reptile?",
+        "attribute": "reptile"
+      },
+      {
+        "id": 33,
+        "text": "Is it an amphibian?",
+        "attribute": "amphibian"
+      },
+      {
+        "id": 34,
+        "text": "Is it an insect?",
+        "attribute": "insect"
+      },
+      {
+        "id": 35,
+        "text": "Is it a bird?",
+        "attribute": "bird"
+      },
+      {
+        "id": 36,
+        "text": "Is it a fish?",
+        "attribute": "fish"
+      },
+      {
+        "id": 37,
+        "text": "Does it live underground?",
+        "attribute": "underground"
+      },
+      {
+        "id": 38,
+        "text": "Is it commonly seen in zoos?",
+        "attribute": "zoo"
+      },
+      {
+        "id": 39,
+        "text": "Does it hunt in groups?",
+        "attribute": "pack_hunter"
+      },
+      {
+        "id": 40,
+        "text": "Is it known for its intelligence?",
+        "attribute": "intelligent"
+      },
+      {
+        "id": 41,
+        "text": "Can it camouflage?",
+        "attribute": "camouflage"
+      },
+      {
+        "id": 42,
+        "text": "Does it have a long tail?",
+        "attribute": "long_tail"
+      },
+      {
+        "id": 43,
+        "text": "Does it have a trunk?",
+        "attribute": "trunk"
+      },
+      {
+        "id": 44,
+        "text": "Does it roar?",
+        "attribute": "roars"
+      },
+      {
+        "id": 45,
+        "text": "Does it bark?",
+        "attribute": "barks"
+      },
+      {
+        "id": 46,
+        "text": "Does it meow?",
+        "attribute": "meows"
+      },
+      {
+        "id": 47,
+        "text": "Can it jump high?",
+        "attribute": "jump_high"
+      },
+      {
+        "id": 48,
+        "text": "Is it a farm animal?",
+        "attribute": "farm_animal"
+      },
+      {
+        "id": 49,
+        "text": "Does it have tusks?",
+        "attribute": "tusks"
+      },
+      {
+        "id": 50,
+        "text": "Is it commonly kept as a pet?",
+        "attribute": "common_pet"
+      }
+    ]
+  },
+  {
+    "category": "object",
+    "questions": [
+      {
+        "id": 1,
+        "text": "Is it electronic?",
+        "attribute": "electronic"
+      },
+      {
+        "id": 2,
+        "text": "Can it fit in your pocket?",
+        "attribute": "portable"
+      },
+      {
+        "id": 3,
+        "text": "Does it require electricity?",
+        "attribute": "electric"
+      },
+      {
+        "id": 4,
+        "text": "Is it used indoors?",
+        "attribute": "indoor"
+      },
+      {
+        "id": 5,
+        "text": "Is it used outdoors?",
+        "attribute": "outdoor"
+      },
+      {
+        "id": 6,
+        "text": "Is it made of wood?",
+        "attribute": "wood"
+      },
+      {
+        "id": 7,
+        "text": "Is it made of metal?",
+        "attribute": "metal"
+      },
+      {
+        "id": 8,
+        "text": "Is it made of plastic?",
+        "attribute": "plastic"
+      },
+      {
+        "id": 9,
+        "text": "Can you hold it with one hand?",
+        "attribute": "one_hand"
+      },
+      {
+        "id": 10,
+        "text": "Is it used every day?",
+        "attribute": "daily_use"
+      },
+      {
+        "id": 11,
+        "text": "Is it found in a kitchen?",
+        "attribute": "kitchen"
+      },
+      {
+        "id": 12,
+        "text": "Is it found in a bedroom?",
+        "attribute": "bedroom"
+      },
+      {
+        "id": 13,
+        "text": "Is it found in an office?",
+        "attribute": "office"
+      },
+      {
+        "id": 14,
+        "text": "Is it a piece of furniture?",
+        "attribute": "furniture"
+      },
+      {
+        "id": 15,
+        "text": "Can it connect to the internet?",
+        "attribute": "internet"
+      },
+      {
+        "id": 16,
+        "text": "Does it have a screen?",
+        "attribute": "screen"
+      },
+      {
+        "id": 17,
+        "text": "Does it have buttons?",
+        "attribute": "buttons"
+      },
+      {
+        "id": 18,
+        "text": "Can it be worn?",
+        "attribute": "wearable"
+      },
+      {
+        "id": 19,
+        "text": "Is it used for communication?",
+        "attribute": "communication"
+      },
+      {
+        "id": 20,
+        "text": "Is it used for transportation?",
+        "attribute": "transport"
+      },
+      {
+        "id": 21,
+        "text": "Does it have wheels?",
+        "attribute": "wheels"
+      },
+      {
+        "id": 22,
+        "text": "Can it produce sound?",
+        "attribute": "sound"
+      },
+      {
+        "id": 23,
+        "text": "Can it produce light?",
+        "attribute": "light"
+      },
+      {
+        "id": 24,
+        "text": "Can it store data?",
+        "attribute": "storage"
+      },
+      {
+        "id": 25,
+        "text": "Is it used for cooking?",
+        "attribute": "cooking"
+      },
+      {
+        "id": 26,
+        "text": "Is it rechargeable?",
+        "attribute": "rechargeable"
+      },
+      {
+        "id": 27,
+        "text": "Does it have a battery?",
+        "attribute": "battery"
+      },
+      {
+        "id": 28,
+        "text": "Can it take photos?",
+        "attribute": "camera"
+      },
+      {
+        "id": 29,
+        "text": "Can it print documents?",
+        "attribute": "printer"
+      },
+      {
+        "id": 30,
+        "text": "Can it display videos?",
+        "attribute": "display"
+      },
+      {
+        "id": 31,
+        "text": "Is it a household appliance?",
+        "attribute": "appliance"
+      },
+      {
+        "id": 32,
+        "text": "Can it be folded?",
+        "attribute": "foldable"
+      },
+      {
+        "id": 33,
+        "text": "Is it waterproof?",
+        "attribute": "waterproof"
+      },
+      {
+        "id": 34,
+        "text": "Is it expensive?",
+        "attribute": "expensive"
+      },
+      {
+        "id": 35,
+        "text": "Can children use it?",
+        "attribute": "child_friendly"
+      },
+      {
+        "id": 36,
+        "text": "Is it commonly found in schools?",
+        "attribute": "school"
+      },
+      {
+        "id": 37,
+        "text": "Is it commonly found in hospitals?",
+        "attribute": "hospital"
+      },
+      {
+        "id": 38,
+        "text": "Can it be carried easily?",
+        "attribute": "easy_to_carry"
+      },
+      {
+        "id": 39,
+        "text": "Is it powered by fuel?",
+        "attribute": "fuel"
+      },
+      {
+        "id": 40,
+        "text": "Can it be used for gaming?",
+        "attribute": "gaming"
+      },
+      {
+        "id": 41,
+        "text": "Can it be used for writing?",
+        "attribute": "writing"
+      },
+      {
+        "id": 42,
+        "text": "Is it made of glass?",
+        "attribute": "glass"
+      },
+      {
+        "id": 43,
+        "text": "Can it float on water?",
+        "attribute": "floats"
+      },
+      {
+        "id": 44,
+        "text": "Can it be mounted on a wall?",
+        "attribute": "wall_mount"
+      },
+      {
+        "id": 45,
+        "text": "Is it used in sports?",
+        "attribute": "sports"
+      },
+      {
+        "id": 46,
+        "text": "Can it cut things?",
+        "attribute": "cutting"
+      },
+      {
+        "id": 47,
+        "text": "Can it measure something?",
+        "attribute": "measuring"
+      },
+      {
+        "id": 48,
+        "text": "Can it open or close something?",
+        "attribute": "opening"
+      },
+      {
+        "id": 49,
+        "text": "Is it a vehicle?",
+        "attribute": "vehicle"
+      },
+      {
+        "id": 50,
+        "text": "Is it commonly found in homes?",
+        "attribute": "home"
+      }
+    ]
+  }
 ]
