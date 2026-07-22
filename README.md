@@ -1338,6 +1338,34 @@ LeetCode Problems Solved
 </details>
 
 
+<details>
+<summary><b>✅ DAY 39 — GuessWise: Full Game Loop, Generic Engine + LeetCode Third Maximum  </b>
+</summary>
+
+### Topics Covered
+
+* Generic play_game() replaces duplicated character_mode()/animal_mode()
+* select_category() — filters characters AND questions by category
+* filter_characters() — core filtering algorithm (list comprehension)
+* show_remaining_candidates() — live feedback after each answer
+* play_again() — restart loop with category memory
+* 80 characters across 3 categories (character, animal, object)
+* 150 questions across 3 categories
+* tools/update_attributes.py — data migration utility
+* LeetCode #414 Third Maximum Number (0ms, beats 100%)
+
+### Files
+
+* DAY-39.md
+* GuessWise-Day-39-Notebook.md
+* LeetCode-414-Third-Maximum-Number.md
+* LeetCode-414-Third-Maximum-Number.png
+* LeetCode-414-Third-Maximum-Number.py
+* **Path:** `Backend-Developer-Journey\Project\GuessWise - Akinator-inspired CLI Guessing Game`
+
+✅ Completed
+</details>
+
 
 
 
