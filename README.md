@@ -1365,7 +1365,31 @@ LeetCode Problems Solved
 
 ✅ Completed
 </details>
+<details>
+<summary><b>✅ DAY 40 — GuessWise: Engine Classes, Refactoring + LeetCode In-Place Marking  </b>
+</summary>
 
+### Topics Covered
+
+* CharacterEngine class — owns all character filtering logic
+* QuestionEngine class — owns all question navigation logic
+* Game refactored — now coordinates engines instead of doing their work
+* select_category() now creates engine instances (not raw lists)
+* play_game() now calls engine methods instead of inline code
+* All game behavior preserved — zero functionality change, only architecture
+* LeetCode #448 solved (Brute Force + HashSet + Index Marking O(1) space)
+
+### Files
+
+* DAY-40.md
+* GuessWise-Day-40-Notebook.md
+* LeetCode-448-Find-All-Numbers-Disappeared-in-an-Array.md
+* LeetCode-448-Find-All-Numbers-Disappeared-in-an-Array.png
+* LeetCode-448-Find-All-Numbers-Disappeared-in-an-Array.py
+* **Path:** `Backend-Developer-Journey\Project\GuessWise - Akinator-inspired CLI Guessing Game`
+
+✅ Completed
+</details>
 
 
 
