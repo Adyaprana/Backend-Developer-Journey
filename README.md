@@ -1391,7 +1391,30 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<summary><b>✅ DAY 41 — GuessWise: PostgreSQL Migration, SQLAlchemy ORM + LeetCode Array Concatenation  </b>
+</summary>
 
+### Topics Covered
+
+* database/database.py      — SQLAlchemy engine + session + Base
+* database/models.py        — 4 ORM models (Character, Attribute, CharacterAttribute, Question)
+* database/create_tables.py — Creates all tables from Python classes
+* database/seed.py          — Seeder class: reads JSON, populates PostgreSQL
+* database/run_seed.py      — One-command database setup
+* repository/postgres_repository.py — PostgresRepository implementing the interface
+* game.py                   — ONE LINE CHANGED: JsonRepository → PostgresRepository
+* LeetCode #1929 solved (3 approaches: Two Loops, One Loop, Pythonic)
+### Files
+
+* DAY-41.md
+* GuessWise-Day-41-Notebook.md
+* LeetCode-1929-Concatenation-of-Array.md
+* LeetCode-1929-Concatenation-of-Array.png
+* LeetCode-1929-Concatenation-of-Array.py
+* **Path:** `Backend-Developer-Journey\Project\GuessWise - Akinator-inspired CLI Guessing Game`
+
+✅ Completed
+</details>
 
 
 
