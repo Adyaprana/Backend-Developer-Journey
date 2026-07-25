@@ -1,10 +1,12 @@
-from repository.json_repository import JsonRepository
+from repository.postgres_repository import PostgresRepository
 from engines.character_engine import CharacterEngine
 from engines.question_engine import QuestionEngine
 
+
 class Game:
     def __init__(self):
-        self.repository = JsonRepository()
+        self.repository = PostgresRepository()
+
     def start(self):
         self.all_characters = self.repository.get_characters()
         self.questions = self.repository.get_questions()
