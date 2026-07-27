@@ -1,6 +1,7 @@
 from repository.postgres_repository import PostgresRepository
 from engines.character_engine import CharacterEngine
 from engines.question_engine import QuestionEngine
+from engines.knowledge_manager import KnowledgeManager
 
 
 class Game:
@@ -21,7 +22,7 @@ class Game:
     def show_menu(self):
         while True:
             print("===================================")
-            print("        🎯 GuessWise               ")
+            print("      🎯 GuessWise CLI v1.0        ")
             print("===================================")
 
             print("1. Character")
@@ -64,13 +65,17 @@ class Game:
                 return
 
             print("\n=========================")
-            print("🎯 GuessWise")
+            print("🎯 GuessWise:",self.current_category.title())
             print("=========================")
             print(f"Category : {self.current_category.title()}")
             print(f"Remaining Candidates : {self.character_engine.count()}")
             
-            print(f"Question {self.question_engine.question_number()}")
-            question = self.question_engine.current_question()
+            asked = 50 - self.question_engine.count() + 1
+            print(f"Question {asked}")
+            question = self.knowledge_manager.best_question()
+            if question is None:
+                print("No useful questions remain.")
+                break
             print(question.text)
             print("1. Yes")
             print("2. No")
@@ -88,22 +93,18 @@ class Game:
             
 
 
-            if choice == "1":
-                self.character_engine.filter(
-                    question.attribute,
-                    True
+            if choice in ["1", "2"]:
+                self.knowledge_manager.process_answer(
+                    question,
+                    choice
                 )
-
-            elif choice == "2":
-                self.character_engine.filter(
-                    question.attribute,
-                    False
-                )              
 
             elif choice in ["3", "4", "5"]:
                 print(f"You selected: {answers[choice]}")
+
             else:
                 print("Invalid choice! Please enter a number from 1 to 5.")
+                continue
 
             print("\nRemaining Candidates:")
             for character in self.character_engine.remaining():
@@ -126,7 +127,6 @@ class Game:
                     self.select_category(self.current_category)
                     return self.play_game()
                 return
-            self.question_engine.next_question()
 
 
 
@@ -149,6 +149,10 @@ class Game:
             if question.category == category
         ]
         self.question_engine = QuestionEngine(questions)
+        self.knowledge_manager = KnowledgeManager(
+            self.character_engine,
+            self.question_engine
+        )
 
 
     def play_again(self) -> bool:

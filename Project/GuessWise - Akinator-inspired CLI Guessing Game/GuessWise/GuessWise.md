@@ -1,181 +1,286 @@
-````markdown
-# 🎯 GuessWise
+# 🎯 GuessWise --- Akinator Inspired Intelligent Guessing Engine
 
-> A command-line Akinator-inspired guessing game built from scratch in Python to learn professional backend development.
+> **GuessWise is a production-style backend project built to learn
+> software engineering by developing a complete guessing engine from
+> scratch.**
+>
+> From a simple JSON file to a layered architecture using PostgreSQL,
+> SQLAlchemy, Repository Pattern, and multiple engines, this project
+> represents my backend development journey.
 
-## 📖 About
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-blue)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-red)
+![Architecture](https://img.shields.io/badge/Clean-Architecture-success)
+![Status](https://img.shields.io/badge/Version-v1.0-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-GuessWise is a backend-focused project where the computer tries to guess the character, animal, object, or fictional personality that the user is thinking of by asking a series of questions.
+------------------------------------------------------------------------
 
-This project is being developed incrementally, following real-world software engineering principles such as clean architecture, modular design, and separation of concerns.
+# 🌟 Project Vision
 
-The goal is not only to build a game but also to learn how professional backend applications are designed from scratch.
+GuessWise is much more than a CLI game.
 
----
+It was intentionally built as a learning project to practice how
+professional backend systems evolve:
 
-## 🚀 Current Version
+-   Build a working prototype
+-   Refactor into clean architecture
+-   Separate responsibilities
+-   Introduce a database
+-   Replace implementations without changing business logic
+-   Design software that can grow
 
-**Version:** `v1.0 (In Development)`
+The long-term vision is to evolve GuessWise into a full-stack AI-powered
+guessing platform.
 
-### Current Features
+------------------------------------------------------------------------
 
-- Project initialization
-- Modular project structure
-- JSON-based data storage
-- Repository pattern (planned)
-- Object-Oriented Design (planned)
+# ✨ Features
 
----
+## Gameplay
 
-## 🛠️ Tech Stack
+-   Character category
+-   Animal category
+-   Object category
+-   Dynamic question selection
+-   Smart candidate filtering
+-   Intelligent guessing
 
-- Python 3
-- JSON
-- Git & GitHub
+## Backend
 
-### Planned Technologies
+-   Repository Pattern
+-   SQLAlchemy ORM
+-   PostgreSQL
+-   Dependency Injection
+-   Clean Architecture
+-   Modular Design
+-   Layered Application
 
-- PostgreSQL
-- SQLAlchemy
-- FastAPI
-- Docker
-- Redis
-- React / Next.js
+------------------------------------------------------------------------
 
----
+# 🏛 Final Architecture
 
-## 📂 Project Structure
+``` text
+                           User
+                             │
+                             ▼
+                           Game
+                             │
+                             ▼
+                    Knowledge Manager
+                   ┌─────────┴─────────┐
+                   ▼                   ▼
+          Character Engine     Question Engine
+                   │                   │
+                   └─────────┬─────────┘
+                             ▼
+                  PostgreSQL Repository
+                             │
+                             ▼
+                        PostgreSQL
+```
 
-```text
-guesswise/
+------------------------------------------------------------------------
 
-├── main.py
-├── game.py
-├── README.md
-├── requirements.txt
-├── .gitignore
+# 📂 Project Structure
 
-├── models/
-│   ├── __init__.py
-│   ├── character.py
-│   └── question.py
-
+``` text
+GuessWise
+│
+├── database/
+│   ├── database.py
+│   ├── models.py
+│   ├── create_tables.py
+│   ├── seed.py
+│   └── run_seed.py
+│
 ├── repository/
-│   ├── __init__.py
 │   ├── repository.py
-│   └── json_repository.py
-
+│   ├── json_repository.py
+│   └── postgres_repository.py
+│
 ├── engines/
-│   ├── __init__.py
 │   ├── character_engine.py
-│   └── question_engine.py
-
-├── utils/
-│   ├── __init__.py
-│   ├── display.py
-│   └── validation.py
-
+│   ├── question_engine.py
+│   └── knowledge_manager.py
+│
+├── models/
 ├── data/
-│   ├── characters.json
-│   └── questions.json
-
-└── tests/
-````
-
----
-
-## 🏗️ Software Architecture
-
-```text
-User
-   │
-   ▼
-Game
-   │
-   ▼
-Question Engine
-   │
-   ▼
-Character Engine
-   │
-   ▼
-Repository Interface
-   │
-   ├── JSON Repository
-   └── PostgreSQL Repository (Future)
+├── game.py
+├── main.py
+└── README.md
 ```
 
-The game logic never directly accesses the data source. This makes it easy to replace JSON with PostgreSQL in future versions without changing the core application logic.
+------------------------------------------------------------------------
 
----
+# 🧠 Core Components
 
-## 🛣️ Roadmap
+## Game
 
-### Version 1
+Coordinates the entire application and communicates with the user.
 
-* CLI Game
-* JSON Storage
-* Character Filtering
-* Guessing Engine
+## Character Engine
 
-### Version 2
+Maintains the remaining candidates and filters them based on answers.
 
-* PostgreSQL Integration
-* SQLAlchemy ORM
+## Question Engine
 
-### Version 3
+Stores the remaining questions and removes those already asked.
 
-* FastAPI REST API
+## Knowledge Manager
 
-### Version 4
+Acts as the decision engine by selecting the most informative question
+from the remaining candidates.
 
-* Authentication
-* Admin Panel
-* CRUD Operations
+## Repository
 
-### Version 5
+Abstracts data access so the rest of the application is independent of
+storage.
 
-* React / Next.js Frontend
+------------------------------------------------------------------------
 
-### Version 6
+# 🗄 Database Design
 
-* Learning Engine
-
-### Version 7
-
-* AI-powered Question Selection
-
----
-
-## 📚 Learning Goals
-
-This project is designed to strengthen practical knowledge of:
-
-* Python
-* Object-Oriented Programming
-* File Handling
-* JSON
-* Software Architecture
-* Repository Pattern
-* SQLAlchemy
-* PostgreSQL
-* FastAPI
-* Clean Code
-* Modular Programming
-
----
-
-## 🤝 Contributing
-
-This project is currently being developed as part of my Backend Developer Journey.
-
-Contributions, suggestions, and feedback are always welcome.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
+``` text
+Characters
+     │
+     ├────────────┐
+     ▼            ▼
+CharacterAttributes
+     ▲            │
+     │            ▼
+ Attributes <── Questions
 ```
+
+Normalized tables eliminate duplicated attribute names and support
+future expansion.
+
+------------------------------------------------------------------------
+
+# 🚀 Development Timeline
+
+## Day 35--39
+
+-   Planned the project
+-   Implemented CLI
+-   Stored data in JSON
+-   Built filtering logic
+
+## Day 40
+
+-   Refactored into Character Engine
+-   Refactored into Question Engine
+-   Reduced responsibilities inside Game
+
+## Day 41
+
+-   Migrated JSON to PostgreSQL
+-   Designed normalized database
+-   Implemented SQLAlchemy models
+-   Built PostgreSQL repository
+-   Seeded the database
+
+## Day 42
+
+-   Introduced Knowledge Manager
+-   Dynamic question selection
+-   Improved architecture
+-   Finalized GuessWise CLI v1.0
+
+------------------------------------------------------------------------
+
+# 📚 Software Engineering Concepts
+
+-   Object-Oriented Programming
+-   SOLID Principles
+-   Single Responsibility Principle
+-   Separation of Concerns
+-   Repository Pattern
+-   Dependency Injection
+-   Layered Architecture
+-   Database Normalization
+-   SQLAlchemy ORM
+-   PostgreSQL
+-   Refactoring
+-   Clean Code
+
+------------------------------------------------------------------------
+
+# 💻 Installation
+
+``` bash
+git clone <repo-url>
+cd GuessWise
+
+python -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python -m database.create_tables
+python -m database.run_seed
+
+python main.py
 ```
+
+------------------------------------------------------------------------
+
+# 🔮 Future Roadmap
+
+## Version 2
+
+-   FastAPI REST API
+-   React / Next.js frontend
+-   JWT Authentication
+-   Admin Dashboard
+-   Docker
+
+## Version 3
+
+-   Entropy / Information Gain
+-   Machine Learning
+-   Self-learning knowledge base
+-   Multiplayer mode
+-   Analytics
+
+------------------------------------------------------------------------
+
+# 📈 What This Project Demonstrates
+
+-   Backend application design
+-   Clean architecture
+-   Professional refactoring
+-   Repository abstraction
+-   Database modelling
+-   ORM usage
+-   Decision engine implementation
+
+------------------------------------------------------------------------
+
+# 👨‍💻 About the Developer
+
+**Adyaprana Pradhan**
+
+This project is part of my **Backend Developer Journey**, where I build
+increasingly complex backend systems to master software engineering
+through practical projects.
+
+------------------------------------------------------------------------
+
+# 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome. Feel free to
+fork the repository, open an issue, or submit a pull request.
+
+------------------------------------------------------------------------
+
+# 📄 License
+
+Licensed under the MIT License.
+
+------------------------------------------------------------------------
+
+⭐ If you enjoyed this project, consider giving it a **Star** on GitHub!
