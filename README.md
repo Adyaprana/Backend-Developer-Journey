@@ -1441,6 +1441,33 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 43 — FastAPI: Setup, First Endpoint, Path & Query Parameters + LeetCode Prefix Sum </b>
+</summary>
+
+### Topics Covered
+
+* pip install fastapi uvicorn
+* Create main.py, write first @app.get("/") endpoint
+* Run with: uvicorn main:app --reload
+* Open Swagger UI at localhost:8000/docs — understand auto-documentation
+* Path parameters: @app.get("/users/{user_id}")
+* Query parameters: @app.get("/items?skip=0&limit=10")
+* Solve LeetCode #303 using Prefix Sum
+
+### Files
+
+* backend-learning/
+* 01.py
+* 02.py
+* DAY-43.md
+* DAY-43.png
+* LeetCode-303-Range-Sum-Query-Immutable.md
+* LeetCode-303-Range-Sum-Query-Immutable.png
+* LeetCode-303-Range-Sum-Query-Immutable.py
+
+✅ Completed
+</details>
 
 
 
