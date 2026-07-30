@@ -1469,6 +1469,35 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>DAY 44 — Pydantic Models: Request/Response Validation + LeetCode Prefix Products </b>
+</summary>
+
+### Topics Cover
+
+* Explain what Pydantic BaseModel is and why it exists
+* Write a POST endpoint that accepts a JSON request body
+* Use `Field(min_length=3)` for custom validation rules
+* Use `Optional[int]` for optional fields
+* Use `EmailStr` for email validation
+* Set a default value for a field
+* Explain what HTTP 422 means and when FastAPI sends it
+* Create a `UserResponse` model that hides the password field
+* Explain the difference between `UserCreate`, `UserUpdate`, `UserResponse`
+* Solve LeetCode #238 using prefix and suffix products
+
+### Files
+
+* backend-learning/
+* 01.py
+* DAY-44.md
+* DAY-44.png
+* LeetCode-238-Product-of-Array-Except-Self.md
+* LeetCode-238-Product-of-Array-Except-Self.png
+* LeetCode-238-Product-of-Array-Except-Self.py
+
+✅ Completed
+</details>
 
 
 
