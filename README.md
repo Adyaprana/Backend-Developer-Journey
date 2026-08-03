@@ -1470,7 +1470,7 @@ LeetCode Problems Solved
 </details>
 
 <details>
-<summary><b>DAY 44 — Pydantic Models: Request/Response Validation + LeetCode Prefix Products </b>
+<summary><b>✅ DAY 44 — Pydantic Models: Request/Response Validation + LeetCode Prefix Products </b>
 </summary>
 
 ### Topics Cover
@@ -1500,7 +1500,7 @@ LeetCode Problems Solved
 </details>
 
 <details>
-<summary><b>DAY 45 — FastAPI + PostgreSQL + SQLAlchemy: Full Database Integration + LeetCode Optimal Prefix Products </b>
+<summary><b>✅ DAY 45 — FastAPI + PostgreSQL + SQLAlchemy: Full Database Integration + LeetCode Optimal Prefix Products </b>
 </summary>
 
 ### Topics Cover
@@ -1526,6 +1526,38 @@ LeetCode Problems Solved
 * LeetCode-238-Product-of-Array-Except-Self.md
 * LeetCode-238-Product-of-Array-Except-Self.png
 * LeetCode-238-Product-of-Array-Except-Self.py
+
+✅ Completed
+</details>
+
+
+<details>
+<summary><b>✅ DAY 46 — JWT Authentication: Login System, Password Hashing & Protected Routes </b>
+</summary>
+
+### Topics Cover
+
+* Explain Authentication vs Authorization from memory
+* Explain why passwords must never be stored plain-text
+* Explain hashing vs encryption (and why passwords use hashing)
+* Explain the three parts of a JWT
+* Write `hash_password()` and `verify_password()` from memory
+* Write `create_access_token()` from memory
+* Write `decode_access_token()` from memory
+* Write the `/register` endpoint with email-duplicate check
+* Write the `/login` endpoint using OAuth2PasswordRequestForm
+* Write `get_current_user()` dependency
+* Write a protected endpoint using `Depends(get_current_user)`
+* Test the complete flow in Swagger: register → login → access protected route
+* Explain `OAuth2PasswordBearer` and what it does NOT do
+
+### Files
+
+* backend-learning/
+* 01.py
+* DAY-46 Authentication Explained.md
+* DAY-46.md
+* DAY-46.png
 
 ✅ Completed
 </details>
