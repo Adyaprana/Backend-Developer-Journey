@@ -1562,6 +1562,51 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 47 — Error Handling, Middleware, CORS & Logging in FastAPI </b>
+</summary>
+
+### Topics Cover
+
+* Explain why a crashed server returning 500 is bad engineering
+* Explain the difference between `raise` and `return` for errors
+* List 6 common HTTP status codes and when to use each
+* Write a `HTTPException(status_code=404, detail="...")` from memory
+* Create a custom exception class and its handler
+* Explain what middleware is with the airport analogy
+* Write a request timing middleware from memory
+* Explain what CORS is and WHY browsers enforce it
+* Add `CORSMiddleware` to a FastAPI app
+* Explain why `allow_origins=["*"]` is dangerous in production
+* Explain why `logger.info()` is better than `print()` in production
+* Draw the complete request lifecycle (all layers)
+
+### Files
+
+* backend-learning/
+* 01.py
+* DAY 47-Error Handling.md
+* DAY-47.md
+* DAY-47.png
+
+✅ Completed
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
