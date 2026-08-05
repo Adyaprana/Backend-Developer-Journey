@@ -1594,6 +1594,30 @@ LeetCode Problems Solved
 
 
 
+<details>
+<summary><b>✅ DAY 48 — Project 1: URL Shortener API — Planning, Architecture & Design </b>
+</summary>
+
+### Topics Cover
+
+## START PROJECT 1 — URL Shortener API
+
+* Plan schema: shortened_urls table (id, original_url, short_code, clicks, created_at)
+* Endpoints: POST /shorten, GET /{short_code} (redirect), GET /stats/{short_code}
+* Design folder structure: main.py, database.py, models.py, routers/urls.py
+* Design the database schema and understand the data flow
+
+
+### Files
+
+* DAY-48.md
+* DAY-48.png
+* URL Shortener API.py
+
+✅ Completed
+</details>
+
+
 
 
 
