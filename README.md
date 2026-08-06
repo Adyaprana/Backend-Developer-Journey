@@ -1619,9 +1619,33 @@ LeetCode Problems Solved
 
 
 
+<details>
+<summary><b>✅ DAY 49 — Rest + Review: URL Shortener Architecture + LeetCode Prefix Sum + HashMap </b>
+</summary>
+
+### Topics Cover
+
+## START PROJECT 1 — URL Shortener API
+
+* Review the 7-day FastAPI journey (Days 43-49)
+* URL Shortener Architecture — Why Layered Design?
+* Folder structure designed (deeper than Day 48 planning)
+* Layer responsibilities explained
+* LeetCode 560 — Subarray Sum Equals K (Brute Force + Prefix Sum + HashMap)
 
 
+### Files
 
+* DAY-49.md
+* DAY-49.png
+* LeetCode-560-Subarray-Sum-Equals-K.md
+* LeetCode-560-Subarray-Sum-Equals-K.png
+* LeetCode-560-Subarray-Sum-Equals-K.py
+* URL Shortener API.py
+* **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
+
+✅ Completed
+</details>
 
 
 
