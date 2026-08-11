@@ -1647,8 +1647,74 @@ LeetCode Problems Solved
 ✅ Completed
 </details>
 
+<details>
+<summary><b>✅ DAY 50 — Project 1: URL Shortener — Database Design, API Contracts + LeetCode Prefix Sum % k
+ </b>
+</summary>
+
+### Topics Cover
+
+## URL Shortener API — Engineering First
+
+* Ask the right question before designing the database
+* Column-by-column schema design with reasoning
+* Constraints: when and why (NOT NULL, UNIQUE, DEFAULT)
+* Indexes: why short_code must be indexed
+* API Contracts: define before coding
+* Short code generation strategies compared
+* LeetCode 523 Continuous Subarray Sum (Prefix Sum % k + HashMap)
 
 
+### Files
+
+* url_shortener_api/
+* DAY-50.md
+* DAY-50.png
+* LeetCode-523-Continuous-Subarray-Sum.md
+* LeetCode-523-Continuous-Subarray-Sum.png 
+* LeetCode-523-Continuous-Subarray-Sum.py
+* URL Shortener API.py
+* **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
+
+✅ Completed
+</details>
+
+
+<details>
+<summary><b>✅ DAY 51 — URL Shortener: Project Initialization, Environment Setup, Database Connection + LeetCode Two Pointers
+ </b>
+</summary>
+
+### Topics Cover
+
+## Day 51 — The Project Comes to Life
+
+* Step 1  — Create the virtual environment
+* Step 2  — Activate it
+* Step 3  — Install core dependencies
+* Step 4  — Freeze requirements.txt
+* Step 5  — Configure .gitignore
+* Step 6  — Create PostgreSQL database (url_shortener_db)
+* Step 7  — Configure .env file
+* Step 8  — Create database.py (engine, session, get_db)
+* Step 9  — Create main.py (first endpoint running) 
+* Step 10 — Verify everything works in Swagger
+* LeetCode #27 — Remove Element (Two Pointer pattern)
+
+
+### Files
+
+* url_shortener_api/
+* DAY-51.md
+* DAY-51.png
+* LeetCode-27-Remove-Element.md
+* LeetCode-27-Remove-Element.png
+* LeetCode-27-Remove-Element.py
+* URL Shortener API.py
+* **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
+
+✅ Completed
+</details>
 
 
 
