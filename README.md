@@ -1718,6 +1718,42 @@ LeetCode Problems Solved
 
 
 
+<details>
+<summary><b>✅ DAY 52 — URL Shortener: Project Initialization, Environment Setup, Database Connection + LeetCode Two Pointers
+ </b>
+</summary>
+
+### Topics Cover
+
+## Day 51 — The Project Comes to Life
+
+## Day 52 — Building the Data Layer
+
+* Why Base deserves its own file (base.py)
+* Restructuring database/ into a proper package
+* ShortenedURL ORM model (full SQLAlchemy 2.0 syntax)
+* Every column designed with real engineering reasoning
+* DateTime with timezone — UTC everywhere
+* lambda for default vs direct function reference
+* Base.metadata.create_all() — tables appear in PostgreSQL
+* Verified in pgAdmin: shortened_urls table exists
+* LeetCode 283 — Move Zeroes (Reader & Writer pattern)
+
+
+### Files
+
+* url_shortener_api/
+* DAY-52.md
+* LeetCode-283-Move-Zeroes.md
+* LeetCode-283-Move-Zeroes.png
+* LeetCode-283-Move-Zeroes.py
+* URL Shortener API.py
+* **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
+
+✅ Completed
+</details>
+
+
 
 
 
