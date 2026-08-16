@@ -1725,8 +1725,6 @@ LeetCode Problems Solved
 
 ### Topics Cover
 
-## Day 51 — The Project Comes to Life
-
 ## Day 52 — Building the Data Layer
 
 * Why Base deserves its own file (base.py)
@@ -1747,6 +1745,38 @@ LeetCode Problems Solved
 * LeetCode-283-Move-Zeroes.md
 * LeetCode-283-Move-Zeroes.png
 * LeetCode-283-Move-Zeroes.py
+* URL Shortener API.py
+* **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
+
+✅ Completed
+</details>
+
+
+<details>
+<summary><b>✅ DAY 53 — URL Shortener: Pydantic Schemas (API Contracts) + LeetCode Merge from the End
+</summary>
+
+### Topics Cover
+
+##  Day 53 — Schema Layer
+
+* Understand why Models ≠ Schemas (the core question)
+* The Restaurant analogy: Client → Schema → FastAPI → Model → Database
+* URLCreate  — what client SENDS (one field: original_url)
+* URLResponse — what API RETURNS after shortening
+* URLStats   — what /stats/{short_code} returns
+* HttpUrl    — why str is not enough for URL validation
+* from_attributes=True — how SQLAlchemy objects become JSON
+* Why id, clicks, created_at are NOT in URLCreate
+* LeetCode #88 — Merge Sorted Array (Three Pointers, Merge from End)
+
+### Files
+
+* url_shortener_api/
+* DAY-53.md
+* LeetCode-88-Merge-Sorted-Array.md
+* LeetCode-88-Merge-Sorted-Array.png
+* LeetCode-88-Merge-Sorted-Array.py
 * URL Shortener API.py
 * **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
 
