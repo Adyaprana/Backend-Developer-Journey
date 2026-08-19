@@ -1784,6 +1784,37 @@ LeetCode Problems Solved
 </details>
 
 
+<details>
+<summary><b>✅  DAY 54 — URL Shortener: Repository Pattern, First Database Insert + LeetCode Array Rotation
+
+</summary>
+
+### Topics Cover
+
+## URL Shortener — Repository Pattern
+
+* Why the Repository Pattern exists (and why not to skip it)
+* Layer responsibilities: Router → Service → Repository → Database
+* URLRepository class with create() method
+* db.add() vs db.commit() vs db.refresh() — exact roles explained
+* Why the Repository receives SQLAlchemy Models (NOT Pydantic Schemas)
+* test_repository.py — isolated test to verify the layer works
+* Verified in pgAdmin: row appeared with id, clicks, created_at auto-generated
+* LeetCode #189 — Rotate Array (Index Mapping + Reverse Method)
+
+### Files
+
+* url_shortener_api/
+* DAY-54.md
+* LeetCode-189-Rotate-Array.md
+* LeetCode-189-Rotate-Array.png
+* LeetCode-189-Rotate-Array.py
+* URL Shortener API.py
+* **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
+
+✅ Completed
+</details>
+
 
 
 
