@@ -1816,6 +1816,39 @@ LeetCode Problems Solved
 </details>
 
 
+<details>
+<summary><b>✅  DAY 55 — URL Shortener: Service Layer, Business Logic, Collision Safety + LeetCode Kadane's Algorithm
+
+</summary>
+
+### Topics Cover
+
+##  URL Shortener — Service Layer (Business Logic)
+
+* Why short code generation belongs in the Service (not Router, not Repository)
+* Short code strategy: 62 characters, length 6, 56.8 billion combinations
+* random.choice vs secrets.choice — when it matters
+* The hidden collision bug — found BEFORE testing
+* Two-layer protection: Application check + Database UNIQUE constraint
+* Race conditions — why database constraint alone is not enough (and vice versa)
+* URLRepository.get_by_short_code() — added to support collision checking
+* while True loop — why it's correct here
+* CODE_LENGTH constant — no magic numbers
+* LeetCode #53 — Maximum Subarray (Brute Force → Kadane's O(n))
+
+### Files
+
+* url_shortener_api/
+* DAY-55.md
+* LeetCode-53-Maximum-Subarray.md
+* LeetCode-53-Maximum-Subarray.png
+* LeetCode-53-Maximum-Subarray.py
+* URL Shortener API.py
+* **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
+
+✅ Completed
+</details>
+
 
 
 
