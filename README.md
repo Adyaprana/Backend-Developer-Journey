@@ -1851,6 +1851,49 @@ LeetCode Problems Solved
 
 
 
+<details>
+<summary><b>✅  DAY 56 — URL Shortener: Router Layer, HTTP Wiring + LeetCode Maximum Sum Circular Subarray
+</summary>
+
+### Topics Cover
+
+
+## URL Shortener — Router Layer (HTTP Wiring)
+
+* Why endpoints don't live directly in main.py
+* APIRouter — grouping endpoints by feature
+* What the Router is allowed to know (and what it must never know)
+* Dependency Injection — Depends(get_db) end to end
+* response_model — validating and shaping the outgoing JSON
+* status_code=201 — why POST /shorten is not a 200
+* Converting Pydantic HttpUrl → str before calling the Service
+* Why short_url is never stored — built dynamically per environment
+* app.include_router() — how main.py finds out the router exists
+* The complete Client → Router → Service → Repository → Database round trip
+* LeetCode #918 — Maximum Sum Circular Subarray (Kadane's + Minimum Kadane + Total Sum)
+
+### Files
+
+* url_shortener_api/
+* CONCEPTS.py
+* DAY-56.md
+* DAY-56.png
+* LeetCode-918-Maximum-Sum-Circular-Subarray.md
+* LeetCode-918-Maximum-Sum-Circular-Subarray.png
+* LeetCode-918-Maximum-Sum-Circular-Subarray.py
+* URL Shortener API.py
+* **Path:** `Backend-Developer-Journey\Project\URL Shortener API`
+
+✅ Completed
+</details>
+
+
+
+
+
+
+
+
 
 
 
