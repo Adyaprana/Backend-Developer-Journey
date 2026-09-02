@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from app.database.base import Base
 from app.database.database import engine
 from app.models.shortened_url import ShortenedURL
+from app.routers.url_router import router as url_router
 
 Base.metadata.create_all(bind=engine)
 
@@ -10,6 +11,7 @@ app = FastAPI(
     version="1.0.0",
     description="A URL Shortener API built with FastAPI and PostgreSQL."
 )
+app.include_router(url_router)
 
 @app.get("/")
 def root():

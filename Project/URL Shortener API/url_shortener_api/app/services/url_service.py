@@ -1,6 +1,7 @@
 import random
 import string
 from sqlalchemy.orm import Session
+from app.schemas.url import URLResponse
 from app.models.shortened_url import ShortenedURL
 from app.repositories.url_repository import URLRepository
 
@@ -25,7 +26,7 @@ class URLService:
         self,
         db: Session,
         original_url: str
-    ) -> ShortenedURL:
+    ) -> URLResponse:
         while True:
             short_code = self.generate_short_code()
             existing_url = self.repository.get_by_short_code(
@@ -38,4 +39,10 @@ class URLService:
             original_url=original_url,
             short_code=short_code
         )
-        return self.repository.create(db, url)
+        saved_url = self.repository.create(db, url)
+        return URLResponse(
+            id=saved_url.id,
+            original_url=saved_url.original_url,
+            short_code=saved_url.short_code,
+            short_url=f"http://127.0.0.1:8000/{saved_url.short_code}"
+        )
